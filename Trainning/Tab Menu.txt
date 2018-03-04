@@ -1,0 +1,5 @@
+Chúng ta đã chia công việc về màn hình.
+Cơ bản là mỗi người design 1 / nhiều màn hình riêng.
+Vậy làm sao để chia ra mỗi người làm từng phần rồi ghép lại. 
+Coi video trong link: https://www.youtube.com/watch?v=EMbyaECzaCk
+Các bạn sẽ hiểu hơn về cách chia phần nhé.

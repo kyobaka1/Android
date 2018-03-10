@@ -23,26 +23,24 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:color/transparent"
-        android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnOder"
         app:layout_constraintStart_toStartOf="@+id/btnFood"
         app:layout_constraintTop_toBottomOf="@+id/btnFood"
-        app:srcCompat="@drawable/food" />
+        app:srcCompat="@drawable/food" android:contentDescription="TODO" />
 
     <ImageButton
         android:id="@+id/btnFood"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:color/transparent"
-        android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnFood_"
         app:layout_constraintStart_toStartOf="@+id/btnHome"
         app:layout_constraintTop_toBottomOf="@+id/btnHome"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/home" android:contentDescription="TODO"/>
 
     <ImageButton
         android:id="@+id/btnHome"
@@ -59,26 +57,24 @@
         android:layout_width="50dp"
         android:layout_height="52dp"
         android:background="@android:color/transparent"
-        android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnLocation"
         app:layout_constraintStart_toStartOf="@+id/btnFood_"
         app:layout_constraintTop_toBottomOf="@+id/btnFood_"
-        app:srcCompat="@drawable/cart" />
+        app:srcCompat="@drawable/cart" android:contentDescription="TODO" />
 
     <ImageButton
         android:id="@+id/btnLocation"
         android:layout_width="50dp"
         android:layout_height="51dp"
         android:background="@android:color/transparent"
-        android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnMusic"
         app:layout_constraintStart_toStartOf="@+id/btnOder"
         app:layout_constraintTop_toBottomOf="@+id/btnOder"
-        app:srcCompat="@drawable/location" />
+        app:srcCompat="@drawable/location" android:contentDescription="TODO"/>
 
     <ImageButton
         android:id="@+id/btn_setting"

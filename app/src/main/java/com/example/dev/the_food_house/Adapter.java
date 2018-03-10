@@ -10,19 +10,29 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  */
 
 public class Adapter extends FragmentStatePagerAdapter {
-    private String ListTab[] = {"Fragment_Home","Fragment_Food"};
+    private String ListTab[] = {"Fragment_Home","Fragment_Food","Fragment_Location","Fragment_Oder"};
     private Home_Fragment mHomeFragment;
     private Food_Fragment mFoodFragment;
+    private Location_Fragment mLocationFragment;
+    private Oder_Fragment mOderFragment;
+    private Coupon_Fragment mCoupon_Fragment;
+
     public Adapter(FragmentManager fm) {
         super(fm);
         mHomeFragment = new Home_Fragment();
         mFoodFragment = new Food_Fragment();
+        mOderFragment = new Oder_Fragment();
+        mLocationFragment = new Location_Fragment();
+        mCoupon_Fragment = new Coupon_Fragment();
     }
 
     @Override
     public Fragment getItem(int position) {
         if (position == 0) return mHomeFragment;
         if (position == 1) return mFoodFragment;
+        if (position == 2) return mOderFragment;
+        if (position == 3) return mLocationFragment;
+        if (position == 4) return mCoupon_Fragment;
         return null;
     }
 

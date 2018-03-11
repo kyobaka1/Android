@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnHome;
     private ImageButton btnFood;
     private ImageButton btnLogin;
+    private ImageButton btnSetting;
     private ImageButton btnLocation;
     private ImageButton btnOder;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnFood = (ImageButton) findViewById(R.id.btnFood_);
         btnLocation = (ImageButton) findViewById(R.id.btnLocation);
         btnOder = (ImageButton) findViewById(R.id.btnOder);
+        btnSetting = (ImageButton) findViewById(R.id.btn_setting);
 
 
         mViewPage = findViewById(R.id.viewPager);
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
-   protected void init(){
+    protected void init(){
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,8 +63,14 @@ public class MainActivity extends AppCompatActivity {
                 mViewPage.setCurrentItem(3);
             }
         });
-
-   }
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent settingIntent = new Intent(MainActivity.this, Setting_Fragment.class);
+               startActivity(settingIntent);
+            }
+        });
+    }
 
 
 }

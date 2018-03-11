@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:src="@drawable/gioithieu1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:text="     Tinh hoa ẩm thực Việt luôn có sức hút kì lạ không chỉ với thực khách trong nước mà còn cả các thực khách ngoại quốc yêu nét đẹp truyền thống. Các món ăn Việt Nam luôn mang hương vị đặc trưng cho từng vùng miền.Tuy nhiên để tìm được một nơi “đúng chất” thì không mấy dễ dàng."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:text="     Chuỗi cửa hàng thức ăn Việt Feeder Restaurant được sáng lập với trách nhiệm truyền bá những tinh hoa ẩm thực Việt đến với mọi người, từ du khách nước ngoài cho đến những người con nơi đất Việt yêu nét đẹp truyền thống của ẩm thực đất nước ở mọi miền đất nước."/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:src="@drawable/gioithieu2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:text="  Được chọn lọc từ những đầu bếp giỏi nhất của 3 miền Bắc,Trung,Nam. Chuỗi cửa hàng của chúng tôi xin trân trọng đảm bảo chất lượng trên từng món ăn mà khách hàng thưởng thức là “đúng chất” và “đạm đà” phong cách người Việt. " />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -17,11 +17,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLoginWithPhone = (ImageButton) findViewById(R.id.btnPhone);
-
+        btnLoginWithFacebook = (ImageButton) findViewById(R.id.btnFacebook);
+        btnLoginWithMail = (ImageButton) findViewById(R.id.btnMail);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        btnLoginWithPhone.setOnClickListener(new View.OnClickListener() {
+        btnLoginWithFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 doOpenChildActivity();
@@ -32,6 +33,23 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+
+        btnLoginWithPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent=new Intent(LoginActivity.this, phoneSignActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
+        btnLoginWithMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent=new Intent(LoginActivity.this, mailSignActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
 
     }
 

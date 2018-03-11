@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:parentActivityName=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,29 +23,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:label="@string/app_name">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Setting_Fragment"
+            android:label="                         Cài đặt"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Setting_Fragment_Quanlitaikhoan"
+            android:label="              Quản lí tài khoản"
+            android:parentActivityName=".Setting_Fragment" />
+        <activity
+            android:name=".Setting_Fragment_Thanhtoan"
+            android:label="                 Thanh toán"
+            android:parentActivityName=".Setting_Fragment" />
+        <activity
+            android:name=".Setting_Fragment_Hotro"
+            android:label="                   Hỗ trợ"
+            android:parentActivityName=".Setting_Fragment" />
+        <activity
+            android:name=".Setting_Fragment_Gioithieu"
+            android:label="                 Giới thiệu"
+            android:parentActivityName=".Setting_Fragment">
+
         </activity>
-        <activity android:name=".Setting_Fragment"
-        android:parentActivityName=".MainActivity"
-        android:label="                         Cài đặt">
-         </activity>
-        <activity android:name=".Setting_Fragment_Quanlitaikhoan"
-            android:parentActivityName=".Setting_Fragment"
-            android:label="              Quản lí tài khoản">
+        <activity
+            android:name=".phoneSignActivity"
+            android:label="Login"
+            android:parentActivityName=".LoginActivity">
+
         </activity>
-        <activity android:name=".Setting_Fragment_Thanhtoan"
-            android:parentActivityName=".Setting_Fragment"
-            android:label="                 Thanh toán">
+
+        <activity android:name=".mailSignActivity"
+            android:label="Login"
+            android:parentActivityName=".LoginActivity">
+
         </activity>
-        <activity android:name=".Setting_Fragment_Hotro"
-            android:parentActivityName=".Setting_Fragment"
-            android:label="                   Hỗ trợ">
-        </activity>
-        <activity android:name=".Setting_Fragment_Gioithieu"
-            android:parentActivityName=".Setting_Fragment"
-            android:label="                 Giới thiệu">
-        </activity>
+
 
     </application>
 

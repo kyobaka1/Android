@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets_array">
+        <item>+84</item>
+        <item>+01</item>
+        <item>+34</item>
+        <item>+33</item>
+        <item>+87</item>
+        <item>+97</item>
+        <item>+2</item>
+        <item>+5</item>
+    </string-array>
+</resources>

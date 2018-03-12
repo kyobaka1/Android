@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     private ViewPager mViewPage;
     private ImageButton btnHome;
     private ImageButton btnFood;
@@ -71,6 +71,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

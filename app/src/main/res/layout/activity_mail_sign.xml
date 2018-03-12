@@ -50,6 +50,7 @@
         android:text="Địa chỉ email giúp bạn bảo mật tài khoản. phục hồi mật khẩu và nhận các thông tin ưu đãi giành cho bạn"
         android:textAllCaps="false"
         android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
         android:textStyle="italic"
         android:typeface="monospace"
         app:layout_constraintBottom_toTopOf="@+id/editText2"

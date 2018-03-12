@@ -27,6 +27,7 @@
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnOder"
+        app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="@+id/btnFood"
         app:layout_constraintTop_toBottomOf="@+id/btnFood"
         app:srcCompat="@drawable/food" />
@@ -40,6 +41,7 @@
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnFood_"
+        app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="@+id/btnHome"
         app:layout_constraintTop_toBottomOf="@+id/btnHome"
         app:srcCompat="@drawable/home" />
@@ -49,10 +51,11 @@
         android:layout_width="50dp"
         android:layout_height="246dp"
         android:background="@android:color/transparent"
+        android:contentDescription="TODO"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnFood"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" android:contentDescription="TODO" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageButton
         android:id="@+id/btnOder"
@@ -63,6 +66,7 @@
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnLocation"
+        app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="@+id/btnFood_"
         app:layout_constraintTop_toBottomOf="@+id/btnFood_"
         app:srcCompat="@drawable/cart" />
@@ -76,6 +80,7 @@
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnMusic"
+        app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="@+id/btnOder"
         app:layout_constraintTop_toBottomOf="@+id/btnOder"
         app:srcCompat="@drawable/location" />
@@ -88,6 +93,7 @@
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/setting" />
 
@@ -105,6 +111,7 @@
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="@+id/btnLocation"
         app:layout_constraintTop_toBottomOf="@+id/btnLocation"
         app:srcCompat="@drawable/music" />

@@ -60,7 +60,11 @@
             android:parentActivityName=".LoginActivity">
 
         </activity>
-
+        <activity
+            android:name=".Hien_Review"
+            android:label="                 Review"
+            android:parentActivityName=".Setting_Fragment">
+        </activity>
 
     </application>
 

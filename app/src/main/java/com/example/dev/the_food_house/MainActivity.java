@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -18,6 +21,9 @@ public class MainActivity extends AppCompatActivity{
     private ImageButton btnSetting;
     private ImageButton btnLocation;
     private ImageButton btnOder;
+    private TextView textView;
+    private Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +36,6 @@ public class MainActivity extends AppCompatActivity{
         btnLocation = (ImageButton) findViewById(R.id.btnLocation);
         btnOder = (ImageButton) findViewById(R.id.btnOder);
         btnSetting = (ImageButton) findViewById(R.id.btn_setting);
-
 
         mViewPage = findViewById(R.id.viewPager);
         mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));
@@ -71,4 +76,7 @@ public class MainActivity extends AppCompatActivity{
             }
         });
     }
+
+
+
 }

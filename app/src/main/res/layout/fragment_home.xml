@@ -4,158 +4,273 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    android:fillViewport="false">
+    android:fillViewport="false"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#f7f9fa">
+        >
 
         Usage
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:src="@drawable/b"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:src="@drawable/avartar"
+            android:background="#2661c6"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="169dp"
             android:layout_height="match_parent"
-            android:text="Name"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_marginStart="90dp"
+            android:text="Viet Feeder"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#f900a6"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="7sp"
+            android:background="#d9d9d6"
+            />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="History"
-            android:background="#ed8828"
-            android:layout_marginStart="200dp"/>
-
-
-
-        <Button
-            android:id="@id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#ed8828"
             android:text="Đặt hàng ngay,giao liền tay"
-            android:background="#ed8828" />
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
+            />
 
         <ImageView
             android:id="@+id/picture_imagebutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/a"  />
+            android:src="@drawable/gioithieu1" />
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Đặt hàng"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:background="#fafaf8"
+            android:textColor="#100f0f"
+            android:text="      Những ngay cuối tháng 3 'rực rỡ' khiến bạn 'tuột mood' vì quá nóng và chán ăn ? Hãy cùng tham gia 'Chién dịch chống nóng và thưởng thức món ăn ngon' tại chuỗi nhà hàng VietFeeder ....."
+            />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:weightSum="2">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ed8828"
+        android:text="Đặt hàng"
+        android:textAlignment="center"
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="#c2c2bd"
+        />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_weight="1"
+            android:layout_width="140dp"
             android:layout_height="match_parent"
+            android:background="#ed8828"
             android:text="Xem thêm"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            android:textStyle="bold" />
+</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
+            />
 
         <ImageView
             android:id="@+id/picture_imagebutton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/a" />
+            android:src="@drawable/gioithieu2" />
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Đặt hàng"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:background="#fafaf8"
+            />
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+            <Button
+            android:id="@+id/btn3"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ed8828"
+                android:text="Đặt hàng"
+                android:textAlignment="center"
+
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="2dp"
             android:layout_height="match_parent"
+            android:background="#c2c2bd"
+            />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_weight="1"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#ed8828"
             android:text="Xem thêm"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            android:textStyle="bold" />
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
+            />
 
         <ImageView
             android:id="@+id/picture_imagebutton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/a" />
+            android:src="@drawable/c" />
 
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:background="#fafaf8"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="140dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ed8828"
             android:text="Đặt hàng"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+            android:layout_width="2dp"
             android:layout_height="match_parent"
+            android:background="#c2c2bd"
+            />
+
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_weight="1"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#ed8828"
             android:text="Xem thêm"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            android:textStyle="bold" />
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
+            />
 
         <ImageView
             android:id="@+id/picture_imagebutton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/a" />
+            android:src="@drawable/e" />
 
         <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:background="#fafaf8"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="140dp"
             android:layout_height="match_parent"
-            android:text="Đạt hàng"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_weight="1"
+            android:background="#ed8828"
+            android:text="Đặt hàng"
+            android:textAlignment="center"
+
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
+            android:layout_width="2dp"
             android:layout_height="match_parent"
+            android:background="#c2c2bd"
+            />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_weight="1"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:background="#ed8828"
             android:text="Xem thêm"
-            android:layout_marginStart="150dp"
-            android:textColor="#f96c00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
 

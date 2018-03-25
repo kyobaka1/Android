@@ -61,7 +61,7 @@
         <activity
             android:name=".Music_Activity"
             android:label="@string/title_activity_music_"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

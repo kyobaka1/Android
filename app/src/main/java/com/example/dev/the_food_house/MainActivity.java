@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity{
     private ImageButton btnSetting;
     private ImageButton btnLocation;
     private ImageButton btnOder;
-    private TextView textView;
-    private Button button;
+    private ImageButton btnMusic;
+
 
 
     @Override
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity{
         btnLocation = (ImageButton) findViewById(R.id.btnLocation);
         btnOder = (ImageButton) findViewById(R.id.btnOder);
         btnSetting = (ImageButton) findViewById(R.id.btn_setting);
+        btnMusic = (ImageButton) findViewById(R.id.btnMusic);
 
         mViewPage = findViewById(R.id.viewPager);
         mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));
@@ -73,6 +74,12 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent settingIntent = new Intent(MainActivity.this, Setting_Fragment.class);
                startActivity(settingIntent);
+            }
+        });
+        btnMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mViewPage.setCurrentItem(5);
             }
         });
     }

@@ -12,9 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-
-        Usage
-
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
             android:layout_width="match_parent"
@@ -173,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/c" />
+            android:src="@drawable/a" />
 
         <TextView
             android:layout_width="match_parent"
@@ -228,7 +225,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/e" />
+            android:src="@drawable/b" />
 
         <TextView
             android:layout_width="match_parent"

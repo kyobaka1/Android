@@ -24,6 +24,14 @@ public class Home_Fragment extends Fragment {
 
 
         Button  btndt=(Button)mRootView.findViewById(R.id.buttondathang);
+        Button  review=(Button)mRootView.findViewById(R.id.btn2);
+        review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(getActivity(),Hien_Review.class);
+                startActivity(it);
+            }
+        });
         btndt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

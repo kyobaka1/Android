@@ -3,6 +3,7 @@ package com.example.dev.the_food_house;
 import android.annotation.SuppressLint;;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 
 /**
@@ -29,7 +32,7 @@ public class Setting_Fragment extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#150303")));
         actionBar.setDefaultDisplayHomeAsUpEnabled(true);
-
+        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/Viet.ttf");
         AnhXa();
         adapter = new menuCaiDatAdapter(this,R.layout.dnv_dong_menu_caidat, arrayMenu);
         lvMenu.setAdapter(adapter);

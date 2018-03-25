@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
+        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/Viet.ttf");
         actionBar.hide();
         btnHome = (ImageButton) findViewById(R.id.btnFood);
         btnFood = (ImageButton) findViewById(R.id.btnFood_);
@@ -79,7 +80,8 @@ public class MainActivity extends AppCompatActivity{
         btnMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mViewPage.setCurrentItem(5);
+                Intent musicIntent = new Intent(MainActivity.this, Music_Activity.class);
+                startActivity(musicIntent);
             }
         });
     }

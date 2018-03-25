@@ -45,27 +45,23 @@
         <activity
             android:name=".Setting_Fragment_Gioithieu"
             android:label="                 Giới thiệu"
-            android:parentActivityName=".Setting_Fragment">
-
-        </activity>
+            android:parentActivityName=".Setting_Fragment" />
         <activity
             android:name=".phoneSignActivity"
             android:label="Login"
-            android:parentActivityName=".LoginActivity">
-
-        </activity>
-
-        <activity android:name=".mailSignActivity"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".mailSignActivity"
             android:label="Login"
-            android:parentActivityName=".LoginActivity">
-
-        </activity>
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".Hien_Review"
             android:label="                 Review"
-            android:parentActivityName=".Setting_Fragment">
-        </activity>
-
+            android:parentActivityName=".Setting_Fragment" />
+        <activity
+            android:name=".Music_Activity"
+            android:label="@string/title_activity_music_"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

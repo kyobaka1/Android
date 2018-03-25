@@ -6,6 +6,18 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+
+
 
     <application
         android:allowBackup="true"
@@ -45,23 +57,36 @@
         <activity
             android:name=".Setting_Fragment_Gioithieu"
             android:label="                 Giới thiệu"
-            android:parentActivityName=".Setting_Fragment" />
+            android:parentActivityName=".Setting_Fragment">
+
+        </activity>
         <activity
             android:name=".phoneSignActivity"
             android:label="Login"
-            android:parentActivityName=".LoginActivity" />
-        <activity
-            android:name=".mailSignActivity"
+            android:parentActivityName=".LoginActivity">
+
+        </activity>
+
+        <activity android:name=".mailSignActivity"
             android:label="Login"
-            android:parentActivityName=".LoginActivity" />
+            android:parentActivityName=".LoginActivity">
+
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDsjz2m6HKo7dsxgzvZViPrMcFMHaSeRpU" />
+
         <activity
             android:name=".Hien_Review"
             android:label="                 Review"
-            android:parentActivityName=".Setting_Fragment" />
-        <activity
-            android:name=".Music_Activity"
-            android:label="@string/title_activity_music_"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:parentActivityName=".Setting_Fragment">
+        </activity>
+
+        <activity android:name=".Oder_Food_Activity" />
+        <activity android:name=".SeeOderFoodActivity" />
+        <activity android:name=".InFo_Food_Activity"/>
+
     </application>
 
 </manifest>

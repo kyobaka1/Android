@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6e5ff"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="386dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="1:1"
+        app:srcCompat="@drawable/cafesau"
+        tools:ignore="Suspicious0dp" />
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Title"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Description"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <TextView
+    android:id="@+id/txtPrice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:text="Price"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    />
+       <ImageView
+        android:layout_width="match_parent"
+           android:layout_margin="10dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#123"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        />
+ <FrameLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     >
+     <Button
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:layout_gravity="right"
+         android:layout_marginRight="51dp"
+         android:background="@drawable/minus"
+         android:gravity="center"
+         android:id="@+id/plus"
+         />
+
+     <Button
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:layout_gravity="right"
+         android:background="@drawable/plus"
+         android:gravity="center"
+         android:id="@+id/minus"
+         />
+     <TextView
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:layout_gravity="right"
+         android:layout_marginRight="26dp"
+         android:background="@color/colorPrimaryDark"
+         android:gravity="center"
+         android:id="@+id/number"/>
+
+ </FrameLayout>
+
+
+
+</LinearLayout>

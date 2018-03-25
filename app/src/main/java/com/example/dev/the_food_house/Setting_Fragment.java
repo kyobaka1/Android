@@ -25,13 +25,13 @@ public class Setting_Fragment extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_setting);
+        setContentView(R.layout.dnv_fragment_setting);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#150303")));
         actionBar.setDefaultDisplayHomeAsUpEnabled(true);
 
         AnhXa();
-        adapter = new menuCaiDatAdapter(this,R.layout.dong_menu_caidat, arrayMenu);
+        adapter = new menuCaiDatAdapter(this,R.layout.dnv_dong_menu_caidat, arrayMenu);
         lvMenu.setAdapter(adapter);
         lvMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

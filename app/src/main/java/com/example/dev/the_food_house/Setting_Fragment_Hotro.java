@@ -25,12 +25,12 @@ public class Setting_Fragment_Hotro extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hotro);
+        setContentView(R.layout.dnv_hotro);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#150303")));
         final Uri URL = Uri.parse("https://www.facebook.com/viettastevietnamese/");
         AnhXa();
-        Hotroadapter = new menuCaiDatAdapter(this,R.layout.dong_hotro_list, arrayMenuHotro);
+        Hotroadapter = new menuCaiDatAdapter(this,R.layout.dnv_dong_hotro_list, arrayMenuHotro);
         lvMenuHoTro.setAdapter(Hotroadapter);
         lvMenuHoTro.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

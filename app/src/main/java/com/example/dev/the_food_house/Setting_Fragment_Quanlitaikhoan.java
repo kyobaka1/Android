@@ -15,7 +15,7 @@ public class Setting_Fragment_Quanlitaikhoan extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quanlitaikhoan);
+        setContentView(R.layout.dnv_quanlitaikhoan);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#150303")));
     }

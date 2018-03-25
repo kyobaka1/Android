@@ -15,7 +15,7 @@ public class Setting_Fragment_Gioithieu extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gioithieu);
+        setContentView(R.layout.dnv_gioithieu);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#150303")));
     }

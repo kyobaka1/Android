@@ -15,7 +15,7 @@ public class Setting_Fragment_Thanhtoan extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thanhtoan);
+        setContentView(R.layout.dnv_thanhtoan);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#150303")));
     }

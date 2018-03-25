@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity{
     private ImageButton btnLocation;
     private ImageButton btnOder;
     private ImageButton btnMusic;
+    String x="1";
 
 
 
@@ -38,9 +40,25 @@ public class MainActivity extends AppCompatActivity{
         btnSetting = (ImageButton) findViewById(R.id.btn_setting);
         btnMusic = (ImageButton) findViewById(R.id.btnMusic);
 
-        mViewPage = findViewById(R.id.viewPager);
-        mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));
-        mViewPage.setCurrentItem(0);
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("YourValueKey");
+        Toast.makeText(getApplication(),""+name,Toast.LENGTH_SHORT).show();
+
+        if(x.equalsIgnoreCase(name)) {
+            mViewPage = findViewById(R.id.viewPager);
+            mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));
+            mViewPage.setCurrentItem(1);
+            init();
+        }
+        else {
+            mViewPage = findViewById(R.id.viewPager);
+            mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));
+            mViewPage.setCurrentItem(0);
+            init();
+        }
+
+
         init();
     }
 

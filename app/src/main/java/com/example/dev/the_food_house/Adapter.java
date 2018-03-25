@@ -16,7 +16,6 @@ public class Adapter extends FragmentStatePagerAdapter {
     private Location_Fragment mLocationFragment;
     private Oder_Fragment mOderFragment;
     private Coupon_Fragment mCoupon_Fragment;
-    private dnv_Music_Fragment mMusic_Fragment;
 
     public Adapter(FragmentManager fm) {
         super(fm);
@@ -25,7 +24,6 @@ public class Adapter extends FragmentStatePagerAdapter {
         mOderFragment = new Oder_Fragment();
         mLocationFragment = new Location_Fragment();
         mCoupon_Fragment = new Coupon_Fragment();
-        mMusic_Fragment = new dnv_Music_Fragment();
     }
 
     @Override
@@ -35,7 +33,6 @@ public class Adapter extends FragmentStatePagerAdapter {
         if (position == 2) return mOderFragment;
         if (position == 3) return mLocationFragment;
         if (position == 4) return mCoupon_Fragment;
-        if (position == 5) return mMusic_Fragment;
         return null;
     }
 

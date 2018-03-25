@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5b89"
+    android:id="@+id/actionbar_tab"
+    android:orientation="vertical">
+
+    <ViewStub
+        android:id="@+id/stub_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inflatedId="@+id/showlayout"
+        android:layout="@layout/my_listview"/>
+
+    <ViewStub
+        android:id="@+id/stub_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inflatedId="@+id/showlayout"
+        android:layout="@layout/my_gridview"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:text="Xem Dỏ Hàng"
+        android:id="@+id/btnxemdo"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        />
+
+
+</FrameLayout>

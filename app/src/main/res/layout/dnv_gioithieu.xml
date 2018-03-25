@@ -15,12 +15,14 @@
                 android:layout_height="185dp"
                 android:src="@drawable/gioithieu1" />
             <TextView
+                android:id="@+id/tv_gioithieu1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:textSize="15sp"
                 android:text="     Tinh hoa ẩm thực Việt luôn có sức hút kì lạ không chỉ với thực khách trong nước mà còn cả các thực khách ngoại quốc yêu nét đẹp truyền thống. Các món ăn Việt Nam luôn mang hương vị đặc trưng cho từng vùng miền.Tuy nhiên để tìm được một nơi “đúng chất” thì không mấy dễ dàng."/>
             <TextView
+                android:id="@+id/tv_gioithieu2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -31,6 +33,7 @@
                 android:layout_height="185dp"
                 android:src="@drawable/gioithieu2" />
             <TextView
+                android:id="@+id/tv_gioithieu3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

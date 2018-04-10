@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "755001147079",
+    "firebase_url": "https://testfirebase-888ef.firebaseio.com",
+    "project_id": "testfirebase-888ef",
+    "storage_bucket": "testfirebase-888ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755001147079:android:37148e89cb6d4ee9",
+        "android_client_info": {
+          "package_name": "com.example.dev.the_food_house"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755001147079-onlfrosolefn4dmdgqrnmo816qb3kujb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dev.the_food_house",
+            "certificate_hash": "c25775ade31358cb2af3cd1c747e2a78d4e5a227"
+          }
+        },
+        {
+          "client_id": "755001147079-ba5chvi59aevcc2d1vij855n2ta54bcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2WdsaOWGgbR6VTwi1vUx65t2h04hxAr8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755001147079-ba5chvi59aevcc2d1vij855n2ta54bcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

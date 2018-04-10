@@ -9,16 +9,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPage;
     private ImageButton btnHome;
     private ImageButton btnFood;
@@ -27,8 +23,7 @@ public class MainActivity extends AppCompatActivity{
     private ImageButton btnLocation;
     private ImageButton btnOder;
     private ImageButton btnMusic;
-    String x="1";
-
+    String x = "1";
 
 
     @Override
@@ -45,18 +40,16 @@ public class MainActivity extends AppCompatActivity{
         btnSetting = (ImageButton) findViewById(R.id.btn_setting);
         btnMusic = (ImageButton) findViewById(R.id.btnMusic);
 
-
         Intent intent = getIntent();
         String name = intent.getStringExtra("YourValueKey");
-        Toast.makeText(getApplication(),""+name,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplication(), "" + name, Toast.LENGTH_SHORT).show();
 
-        if(x.equalsIgnoreCase(name)) {
+        if (x.equalsIgnoreCase(name)) {
             mViewPage = findViewById(R.id.viewPager);
             mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));
             mViewPage.setCurrentItem(1);
             init();
-        }
-        else {
+        } else {
             mViewPage = findViewById(R.id.viewPager);
             mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));
             mViewPage.setCurrentItem(0);
@@ -68,12 +61,10 @@ public class MainActivity extends AppCompatActivity{
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COARSE_LOCATION}, 101);
 
         }
-
-
         init();
     }
 
-    protected void init(){
+    protected void init() {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,22 +89,18 @@ public class MainActivity extends AppCompatActivity{
                 mViewPage.setCurrentItem(3);
             }
         });
+        btnMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mViewPage.setCurrentItem(5);
+            }
+        });
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent settingIntent = new Intent(MainActivity.this, Setting_Fragment.class);
-               startActivity(settingIntent);
-            }
-        });
-        btnMusic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent musicIntent = new Intent(MainActivity.this, Music_Activity.class);
-                startActivity(musicIntent);
+                startActivity(settingIntent);
             }
         });
     }
-
-
-
 }

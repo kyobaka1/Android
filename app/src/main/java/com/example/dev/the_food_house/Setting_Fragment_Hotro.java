@@ -30,7 +30,7 @@ public class Setting_Fragment_Hotro extends AppCompatActivity {
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#150303")));
         final Uri URL = Uri.parse("https://www.facebook.com/viettastevietnamese/");
         AnhXa();
-        Hotroadapter = new menuCaiDatAdapter(this,R.layout.dnv_dong_hotro_list, arrayMenuHotro);
+        Hotroadapter = new menuCaiDatAdapter(this,R.layout.dnv_dong_menu_caidat, arrayMenuHotro);
         lvMenuHoTro.setAdapter(Hotroadapter);
         lvMenuHoTro.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -59,10 +59,10 @@ public class Setting_Fragment_Hotro extends AppCompatActivity {
     private void AnhXa(){
         lvMenuHoTro = (ListView) findViewById(R.id.listview_hotro);
         arrayMenuHotro = new ArrayList<>();
-        arrayMenuHotro.add(new MenuCaiDat("/viettastevietnamese",R.drawable.facebookicon));
-        arrayMenuHotro.add(new MenuCaiDat("0988 700 162",R.drawable.phoneicon));
-        arrayMenuHotro.add(new MenuCaiDat("support@vietfeeder.com",R.drawable.emailicon));
-        arrayMenuHotro.add(new MenuCaiDat("Trụ sở chính: 97 Man Thiện",R.drawable.addressicon));
+        arrayMenuHotro.add(new MenuCaiDat("/viettastevietnamese",R.drawable.facebook_icon));
+        arrayMenuHotro.add(new MenuCaiDat("0988 700 162",R.drawable.phone_icon));
+        arrayMenuHotro.add(new MenuCaiDat("support@vietfeeder.com",R.drawable.email_icon));
+        arrayMenuHotro.add(new MenuCaiDat("Trụ sở chính: 97 Man Thiện",R.drawable.location_icon));
 
 
     }

@@ -5,43 +5,44 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    android:weightSum="13">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6"
-        android:tint="@color/colorPrimary">
-
-        <ListView
-            android:id="@+id/listview_menu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </RelativeLayout>
-
+    android:weightSum="20">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
-        android:background="#b49898"
-        android:orientation="vertical">
+        android:layout_weight="5">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/background" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="#f26e09"
-            android:text="        Đăng xuất        "
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:text="Code by Super Android VIP PRO team" />
-
-
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/avartar" />
+        </FrameLayout>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#e7d9d9"
+        android:layout_weight="14">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#fff"
+            android:id="@+id/listview_menu"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Code by Đoàn Ngọc Vương"
+        android:background="#e7d9d9"
+        android:paddingRight="20dp"
+        android:textAlignment="textEnd"/>
+
 </LinearLayout>

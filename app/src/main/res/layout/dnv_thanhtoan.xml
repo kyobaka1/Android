@@ -17,7 +17,7 @@
         <ImageView
             android:layout_marginLeft="15dp"
             android:layout_width="wrap_content"
-            android:src="@drawable/payicon"
+            android:src="@drawable/money_icon"
             android:layout_height="match_parent" />
         <TextView
             android:layout_marginTop="5dp"
@@ -42,4 +42,11 @@
             android:textSize="16sp"
             android:textColor="#f77809"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Code by Đoàn Ngọc Vương"
+        android:background="#e7d9d9"
+        android:paddingRight="20dp"
+        android:textAlignment="textEnd"/>
 </LinearLayout>

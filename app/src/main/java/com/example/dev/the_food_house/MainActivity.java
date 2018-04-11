@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -24,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnOder;
     private ImageButton btnMusic;
     String x = "1";
-
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

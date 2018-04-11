@@ -16,10 +16,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
         android:id="@+id/btnFood_"
+        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:color/transparent"
@@ -31,10 +32,11 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFood"
-        app:srcCompat="@drawable/food" />
+        app:srcCompat="@drawable/btn_home_restaurant" />
 
     <ImageButton
         android:id="@+id/btnFood"
+        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:color/transparent"
@@ -46,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHome"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/btn_home" />
 
     <ImageButton
         android:id="@+id/btnHome"
@@ -75,7 +77,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFood_"
-        app:srcCompat="@drawable/cart" />
+        app:srcCompat="@drawable/btn_home_cart" />
 
     <ImageButton
         android:id="@+id/btnLocation"
@@ -90,7 +92,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnOder"
-        app:srcCompat="@drawable/location" />
+        app:srcCompat="@drawable/btn_home_location" />
 
     <ImageButton
         android:id="@+id/btn_setting"
@@ -102,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/setting" />
+        app:srcCompat="@drawable/btn_home_setting" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -123,7 +125,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLocation"
-        app:srcCompat="@drawable/music" />
+        app:srcCompat="@drawable/btn_home_music" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("YourValueKey");
-        Toast.makeText(getApplication(), "" + name, Toast.LENGTH_SHORT).show();
-
         if (x.equalsIgnoreCase(name)) {
             mViewPage = findViewById(R.id.viewPager);
             mViewPage.setAdapter(new Adapter(getSupportFragmentManager()));

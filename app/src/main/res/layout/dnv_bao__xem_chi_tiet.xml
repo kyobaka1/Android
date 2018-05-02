@@ -2,6 +2,7 @@
 <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <ScrollView
+        android:id="@+id/scrollview_bao_xemchitiet"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -12,7 +13,6 @@
             <TextView
                 android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
-                android:text="Hello 1"
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_bao_noidung1"/>
             <ImageView
@@ -20,11 +20,64 @@
                 android:layout_height="280dp"
                 android:id="@+id/img_bao_hinh2"/>
             <TextView
+                android:layout_width="match_parent"
+                android:text="Hình minh hoạ"
+                android:textAlignment="center"
+                android:layout_height="wrap_content" />
+            <TextView
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hello2"
                 android:id="@+id/txt_bao_noidung2"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#b3adad"
+                android:orientation="vertical"
+                android:layout_height="90dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/edt_bao_bl"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#fff" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="2 bình luận"
+                        android:id="@+id/txt_bao_bl_sobl"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content" />
+                    <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:background="#3e4bae"
+                        android:padding="5dp"
+                        android:id="@+id/button_bao_bl_delete"
+                        android:textColor="#fff"
+                        android:text="Xoá bình luận"
+                        ></Button>
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="#3e4bae"
+                        android:padding="5dp"
+                        android:id="@+id/button_bao_bl_send"
+                        android:textColor="#fff"
+                        android:text="Gửi bình luận">
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/listview_binhluan"
+                android:layout_height="300dp">
+
+            </ListView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -11,8 +11,35 @@ public class Bao {
     private String doanvan1;
     private String Hinh2;
     private String doanvan2;
+    private int solove;
+    private int soshare;
+    private String gioithieu;
 
     public Bao() {
+    }
+
+    public int getSolove() {
+        return solove;
+    }
+
+    public String getGioithieu() {
+        return gioithieu;
+    }
+
+    public void setGioithieu(String gioithieu) {
+        this.gioithieu = gioithieu;
+    }
+
+    public void setSolove(int solove) {
+        this.solove = solove;
+    }
+
+    public int getSoshare() {
+        return soshare;
+    }
+
+    public void setSoshare(int soshare) {
+        this.soshare = soshare;
     }
 
     public Bao(String ten, String hinh, String thoidiem, String doanvan1, String hinh2, String doanvan2) {
@@ -21,6 +48,7 @@ public class Bao {
         this.thoidiem = thoidiem;
         this.doanvan1 = doanvan1;
         Hinh2 = hinh2;
+
         this.doanvan2 = doanvan2;
     }
 

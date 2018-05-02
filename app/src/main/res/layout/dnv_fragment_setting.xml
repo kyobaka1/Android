@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     android:weightSum="20">
     <LinearLayout
@@ -19,16 +18,20 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/background" />
 
-            <ImageView
-                android:layout_width="match_parent"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/avartar" />
+                android:layout_margin="@dimen/cast_libraries_material_featurehighlight_center_horizontal_offset"
+                android:src="@drawable/avartar"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
         </FrameLayout>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#e7d9d9"
+        android:background="#fff"
         android:layout_weight="14">
         <ListView
             android:layout_width="match_parent"
@@ -41,8 +44,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Code by Đoàn Ngọc Vương"
-        android:background="#e7d9d9"
         android:paddingRight="20dp"
         android:textAlignment="textEnd"/>
-
 </LinearLayout>

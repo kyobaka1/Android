@@ -3,7 +3,6 @@
     android:layout_width="match_parent" android:layout_height="80dp"
     android:padding="3dp"
     android:layout_marginTop="5sp"
-    android:background="#e7d9d9"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <RelativeLayout

@@ -39,12 +39,25 @@ public class user {
     public boolean LoginWithFacebook(){
         return true;
     }
-
+    public user(){
+    }
     public user(boolean isLogin, int point, String avatar, String background) {
         this.isLogin = isLogin;
         this.point = point;
         this.avatar = avatar;
         this.background = background;
+    }
+    public user(String userName, String ID, String email, String phone, boolean isLogin, int point, ArrayList<coupon> listCoupon, String avatar, String background, ArrayList<Product> listHis) {
+        this.userName = userName;
+        this.ID = ID;
+        this.email = email;
+        this.phone = phone;
+        this.isLogin = isLogin;
+        this.point = point;
+        this.listCoupon = listCoupon;
+        this.avatar = avatar;
+        this.background = background;
+        this.listHis = listHis;
     }
 
     public String getUserName() {

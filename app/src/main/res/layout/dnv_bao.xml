@@ -20,22 +20,62 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:scaleType="matrix" />
+                android:id="@+id/img_baohot_hinh1"
+                android:scaleType="centerCrop" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Người phụ nữ thả màn bán thịt ở chợ Hải Phòng"
+                android:id="@+id/txt_baohot_tieude"
+                android:text=""
                 android:textSize="18sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ngày 31/3, mạng xã hội chia sẻ nhiều hình ảnh người phụ nữ quây chiếc màn tuyn trắng quanh hàng thịt lợn, kèm theo đó là dòng status: Cô bán thịt đầy đủ vệ sinh an toàn thực phẩm nhất Hải Phòng."
+                android:id="@+id/txt_baohot_gioithieu"
+                android:text=""
                 android:textSize="12sp"/>
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1 giờ trước"
-                android:textSize="12sp"/>
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_marginLeft="40px"
+                    android:layout_width="15dp"
+                    android:background="#fff"
+                    android:id="@+id/button_hotbao_love"
+                    android:scaleType="fitXY"
+                    android:layout_height="15dp"
+                    android:src="@drawable/loveicon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="11dp"
+                    android:id="@+id/txt_hotbao_love"/>
+                <ImageButton
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="15dp"
+                    android:background="#fff"
+                    android:scaleType="fitXY"
+                    android:id="@+id/button_hotbao_share"
+                    android:layout_height="15dp"
+                    android:src="@drawable/shareicon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:text="0"
+                    android:id="@+id/txt_hotbao_share"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAlignment="textEnd"
+                    android:id="@+id/txt_time_dong_hotbao"
+                    android:layout_marginRight="20dp"
+                    android:textSize="11sp"
+                    />
+            </LinearLayout>
         </LinearLayout>
         <ListView
             android:layout_width="match_parent"

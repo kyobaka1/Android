@@ -44,13 +44,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-//        btnLoginWithMail.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent myIntent=new Intent(LoginActivity.this, mailSignActivity.class);
-//                startActivity(myIntent);
-//            }
-//        });
 
 
     }

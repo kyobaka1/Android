@@ -76,8 +76,10 @@
         <activity android:name=".Oder_Food_Activity" />
         <activity android:name=".SeeOderFoodActivity" />
         <activity android:name=".InFo_Food_Activity" />
-        <activity android:name=".Bao_XemChiTiet"
-            android:label="                           Báo Mới"></activity>
+        <activity
+            android:name=".Bao_XemChiTiet"
+            android:label="                           Báo Mới" />
+        <activity android:name=".SignupActivity"></activity>
     </application>
 
 </manifest>

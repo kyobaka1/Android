@@ -5,11 +5,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class LoginActivity extends AppCompatActivity {
     private ImageButton btnLoginWithPhone;
-    private ImageButton btnLoginWithMail;
+    private Button btnSkip;
     private ImageButton btnLoginWithFacebook;
 
     @Override
@@ -17,12 +18,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLoginWithPhone = (ImageButton) findViewById(R.id.btnPhone);
-        btnLoginWithFacebook = (ImageButton) findViewById(R.id.btnFacebook);
-        btnLoginWithMail = (ImageButton) findViewById(R.id.btnMail);
+        btnSkip = (Button)findViewById(R.id.btnSkip);
+//        btnLoginWithFacebook = (ImageButton) findViewById(R.id.btnFacebook);
+//        btnLoginWithMail = (ImageButton) findViewById(R.id.btnMail);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        btnLoginWithFacebook.setOnClickListener(new View.OnClickListener() {
+        btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 doOpenChildActivity();
@@ -42,13 +44,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnLoginWithMail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent=new Intent(LoginActivity.this, mailSignActivity.class);
-                startActivity(myIntent);
-            }
-        });
+//        btnLoginWithMail.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent myIntent=new Intent(LoginActivity.this, mailSignActivity.class);
+//                startActivity(myIntent);
+//            }
+//        });
 
 
     }

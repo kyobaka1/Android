@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="23dp"
         android:background="@drawable/logo_login"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:color/transparent" />
@@ -21,10 +22,8 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:fontFamily="sans-serif"
+        android:padding="10dp"
         android:text="Tích sao ngay, quà trao tay"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
@@ -32,20 +31,22 @@
         android:typeface="normal"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="310dp"
+        android:layout_width="0dp"
         android:layout_height="67dp"
-        android:layout_marginBottom="34dp"
-        android:layout_marginStart="8dp"
+        android:padding="10dp"
         android:text="Đăng nhập để tham gia tích điểm Ngôi sao và nhận những phần quà bất ngờ từ Viet Feeder Restaurant"
         android:textAlignment="viewStart"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -53,38 +54,25 @@
         android:id="@+id/btnPhone"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnMail"
+        android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+        app:layout_constraintBottom_toTopOf="@+id/btnSkip"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@android:drawable/stat_sys_phone_call" />
 
-    <ImageButton
-        android:id="@+id/btnMail"
+    <Button
+        android:id="@+id/btnSkip"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnFacebook"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPhone"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
-    <ImageButton
-        android:id="@+id/btnFacebook"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:scaleType="fitCenter"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        android:text="SKIP"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMail"
-        app:srcCompat="@drawable/fb" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPhone" />
 
 </android.support.constraint.ConstraintLayout>

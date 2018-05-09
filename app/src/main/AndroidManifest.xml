@@ -78,8 +78,6 @@
         <activity android:name=".InFo_Food_Activity" />
         <activity android:name=".Bao_XemChiTiet"
             android:label="                           Báo Mới"></activity>
-        <activity android:name=".ReadmoreActivity"/>
-        <activity android:name=".HistoryActivity"/>
     </application>
 
 </manifest>

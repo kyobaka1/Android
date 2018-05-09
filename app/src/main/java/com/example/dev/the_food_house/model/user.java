@@ -153,15 +153,14 @@ public class user {
         if(flag){
             this.isLogin = true;
             this.point = 100;
-            this.avatar = "/drawable/avartar";
-            this.background = "/drawable/background";
+            this.avatar = "https://firebasestorage.googleapis.com/v0/b/thefoodhouse3.appspot.com/o/user_default_avarta.jpg?alt=media&token=882c9a15-0ec0-44e7-9042-da76e1f1c58b";
+            this.background = "https://firebasestorage.googleapis.com/v0/b/thefoodhouse3.appspot.com/o/bokho.jpeg?alt=media&token=8dee2cf9-dcef-490a-a287-f79fde2142a6";
             this.userName = "levanchon";
             this.ID = "0";
             this.email = "example@gmail.com";
             this.phone = "0976655443";
         }
     }
-
 
     public String getUserName() {
         return userName;

@@ -25,23 +25,16 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_marginLeft="40px"
-                    android:layout_width="15dp"
-                    android:background="#fff"
-                    android:focusable="false"
-                    android:clickable="false"
-                    android:focusableInTouchMode="false"
-                    android:id="@+id/button_bao_love"
-                    android:scaleType="fitXY"
+                <CheckBox
+                    android:layout_width="30dp"
                     android:layout_height="15dp"
-                    android:src="@drawable/loveicon"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:button="@drawable/config_love_checkbox"
+                    android:layout_marginLeft="40px"
                     android:text="20"
                     android:textSize="11dp"
-                    android:id="@+id/txt_bao_love"/>
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/button_bao_love"
+                     />
                 <ImageButton
                     android:layout_marginLeft="5dp"
                     android:layout_width="15dp"

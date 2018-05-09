@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/cochu_large"
+    android:title="Cỡ Lớn"/>
+    <item android:id="@+id/cochu_medium"
+        android:title="Cỡ Vừa"/>
+    <item android:id="@+id/cochu_small"
+        android:title="Cỡ Nhỏ"/>
+</menu>

@@ -4,6 +4,7 @@
     <ScrollView
         android:id="@+id/scrollview_bao_xemchitiet"
         android:layout_width="match_parent"
+        android:background="#fff"
         android:layout_height="match_parent">
         <LinearLayout
             android:padding="10dp"
@@ -32,7 +33,7 @@
                 android:id="@+id/txt_bao_noidung2"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:background="#b3adad"
+                android:background="#ec6464"
                 android:orientation="vertical"
                 android:layout_height="90dp">
                 <EditText
@@ -46,22 +47,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
+                    android:weightSum="10"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="2 bình luận"
+                        android:textColor="#000"
                         android:id="@+id/txt_bao_bl_sobl"
                         android:textStyle="bold"
+                        android:layout_weight="9"
                         android:layout_marginLeft="5dp"
                         android:layout_height="wrap_content" />
-                    <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:background="#3e4bae"
-                        android:padding="5dp"
-                        android:id="@+id/button_bao_bl_delete"
-                        android:textColor="#fff"
-                        android:text="Xoá bình luận"
-                        ></Button>
                     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:background="#3e4bae"

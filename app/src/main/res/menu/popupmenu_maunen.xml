@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bg_sang"
+        android:title="Sáng"/>
+    <item android:id="@+id/bg_trungbinh"
+        android:title="Trung bình"/>
+    <item android:id="@+id/bg_toi"
+        android:title="Tối"/>
+</menu>

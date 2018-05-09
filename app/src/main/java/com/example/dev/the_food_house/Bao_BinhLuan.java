@@ -5,14 +5,17 @@ package com.example.dev.the_food_house;
  */
 
 public class Bao_BinhLuan {
+    private String key;
     private String tenUser;
     private String binhLuan;
+    private String avarta;
     private int baiBaoId;
     public Bao_BinhLuan(){}
-    public Bao_BinhLuan( int baiBaoId,String tenUser, String binhLuan){
+    public Bao_BinhLuan( int baiBaoId,String tenUser,String avarta, String binhLuan){
         this.tenUser = tenUser;
         this.binhLuan = binhLuan;
         this.baiBaoId = baiBaoId;
+        this.avarta = avarta;
     }
     public String getTenUser() {
         return tenUser;
@@ -36,5 +39,20 @@ public class Bao_BinhLuan {
 
     public void setBaiBaoId(int baiBaoId) {
         this.baiBaoId = baiBaoId;
+    }
+
+    public String getAvarta() {
+        return avarta;
+    }
+    public void setAvarta(String avarta) {
+        this.avarta = avarta;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 }

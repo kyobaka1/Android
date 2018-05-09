@@ -2,19 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:background="#afa2a2"
+    android:background="#f16464"
+    android:weightSum="10"
     android:layout_gravity="bottom">
     <EditText
         android:layout_width="250dp"
+        android:layout_weight="9"
         android:id="@+id/edt_sua_bl"
         android:background="#fff"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
     <Button
+        android:layout_marginTop="10dp"
         android:layout_width="75dp"
+        android:layout_marginRight="10dp"
         android:id="@+id/button_bao_bl_sua"
-        android:layout_height="50dp"
+        android:layout_height="45dp"
+        android:background="#167de4"
         android:text="Sửa"/>
 </LinearLayout>

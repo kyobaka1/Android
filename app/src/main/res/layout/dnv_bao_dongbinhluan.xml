@@ -2,24 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="horizontal"
-    android:layout_height="60dp">
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="70dp">
     <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/avarta_binhluan"
         android:src="@drawable/user_icon"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_bao_bl_username"
+                android:text="Username"
+                android:textSize="16sp"
+                android:textColor="#325db9"
+                android:textStyle="bold"/>
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/modify_binhluan"
+                android:scaleType="center"
+                android:layout_height="20dp"
+                android:src="@drawable/modifyicon" />
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/delete_binhluan"
+                android:layout_height="20dp"
+                android:src="@drawable/deleteicon" />
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txt_bao_bl_username"
-            android:text="Đoàn Ngọc Vương"
-            android:textStyle="bold"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:textColor="#000"
             android:id="@+id/txt_bao_bl_binhluan"
             android:text="Tôi nghĩ hành động trên rất là tuyệt vời luôn nhé!"/>
     </LinearLayout>

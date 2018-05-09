@@ -1,5 +1,8 @@
 package com.example.dev.the_food_house;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
@@ -42,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         btnOder = (ImageButton) findViewById(R.id.btnOder);
         btnSetting = (ImageButton) findViewById(R.id.btn_setting);
         btnMusic = (ImageButton) findViewById(R.id.btnMusic);
-
         Intent intent = getIntent();
         String name = intent.getStringExtra("YourValueKey");
         if (x.equalsIgnoreCase(name)) {
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mViewPage.setCurrentItem(5);
+
             }
         });
         btnSetting.setOnClickListener(new View.OnClickListener() {

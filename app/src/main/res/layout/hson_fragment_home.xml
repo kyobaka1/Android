@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
+    android:background="#f1e0d2"
     android:fillViewport="false"
     >
 
@@ -14,101 +15,108 @@
         >
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:weightSum="3">
-
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/avartar"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp"
-
-            />
-
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="258dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="2"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Viet Feeder"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#f900a6"
-                android:textSize="30dp"
-                android:textStyle="bold" />
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/avartar"
+                android:background="#f1e0d2"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+
+                />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:weightSum="3">
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal"
-                    android:layout_weight="1"
-                    android:weightSum="2">
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    />
-                 <ImageView
-                     android:layout_width="40dp"
-
-                     android:layout_height="40dp"
-                     android:background= "@drawable/star1"
-                     />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal"
+                    android:id="@+id/textView"
+                    android:layout_width="258dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_weight="2"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Viet Feeder"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#f900a6"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
                     android:weightSum="3">
 
-                    <TextView
+
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="0dp"
+                            android:background="@drawable/iconstar" />
+
+                        <TextView
+                            android:layout_width="34dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
                         android:layout_weight="2"
-                        android:gravity="right|center"
-                        android:text="History"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="16sp" />
+                        android:weightSum="3">
 
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center|right"
-                        android:background= "@drawable/icon_ba"
-                        />
+                        /// ?
+                        <Button
+                            android:id="@+id/history"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="2"
+                            android:gravity="right|center"
+                            android:text="History"
+                            android:background="#f1e0d2"
+                            android:textSize="10sp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|right"
+                            android:background= "@drawable/icon_ba"
+                            />
+
+
+                    </LinearLayout>
+
                 </LinearLayout>
-
             </LinearLayout>
+
+
+
+
+
         </LinearLayout>
-
-
-
-
-
-    </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="7sp"
@@ -142,47 +150,56 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="70sp"
+            android:layout_height="90sp"
             android:background="#fafaf8"
             android:textColor="#100f0f"
-            android:text="      Những ngay cuối tháng 3 'rực rỡ' khiến bạn 'tuột mood' vì quá nóng và chán ăn ? Hãy cùng tham gia 'Chién dịch chống nóng và thưởng thức món ăn ngon' tại chuỗi nhà hàng VietFeeder ....."
+            android:text="Những ngay cuối tháng 3 'rực rỡ' khiến bạn 'tuột mood' vì quá nóng và chán ăn ? Hãy cùng tham gia 'Chién dịch chống nóng và thưởng thức món ăn ngon' tại chuỗi nhà hàng VietFeeder ....."
+            android:maxLength="300"
             />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:orientation="horizontal"
-    android:weightSum="2">
 
-    <Button
-        android:id="@+id/btndathang1"
-        android:layout_width="140dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#ed8828"
-        android:text="Đặt hàng"
-        android:textAlignment="center"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
+            />
 
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-    <TextView
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        android:background="#c2c2bd"
-        />
+            <Button
+                android:id="@+id/btndathang1"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ed8828"
+                android:text="Đặt hàng"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
 
-        <Button
-            android:id="@+id/btn2"
-            android:layout_weight="1"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:background="#ed8828"
-            android:text="Xem thêm"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+                />
 
-            android:textStyle="bold" />
-</LinearLayout>
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#c2c2bd"
+                />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_weight="1"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="#ed8828"
+                android:text="Xem thêm"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+
+                android:textStyle="bold" />
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="15sp"
@@ -198,18 +215,27 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="70sp"
+            android:layout_height="90sp"
+            android:textColor="#100f0f"
             android:background="#fafaf8"
+            android:maxLength="300"
+            android:text="Nằm giữa đô thị hiện đại, VietFeeder lại mang đến cảm giác thân thuộc, dân dã cho thực khách ngay khi đặt chân vào cửa. Quán phục vụ các món ăn dân dã, đặc sản Nam Bộ,Bắc Bộ và Trung Bộ."
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
             />
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <Button
-            android:id="@+id/btn3"
+                android:id="@+id/btndathang2"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -220,24 +246,24 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="#c2c2bd"
-            />
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#c2c2bd"
+                />
 
-        <Button
-            android:id="@+id/btn4"
-            android:layout_weight="1"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:background="#ed8828"
-            android:text="Xem thêm"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            <Button
+                android:id="@+id/btn3"
+                android:layout_weight="1"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="#ed8828"
+                android:text="Xem thêm"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
 
-            android:textStyle="bold" />
-    </LinearLayout>
+                android:textStyle="bold" />
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="15sp"
@@ -253,46 +279,56 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="70sp"
+            android:layout_height="90sp"
             android:background="#fafaf8"
+            android:textColor="#100f0f"
+            android:maxLength="300"
+            android:text="Trong 4 ngày 24-25/4; 30/4 và ngày đầu tiên của năm mới 2018, nhà hàng mang đến 2 thực đơn đặc biệt với mức giá chung 1 triệu đồng/set ăn người lớn (chưa bao gồm VAT)...."
             />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <Button
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#ed8828"
-            android:text="Đặt hàng"
-            android:textAlignment="center"
-
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="#c2c2bd"
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
             />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-        <Button
-            android:id="@+id/btn6"
-            android:layout_weight="1"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:background="#ed8828"
-            android:text="Xem thêm"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            <Button
+                android:id="@+id/btndathang3"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ed8828"
+                android:text="Đặt hàng"
+                android:textAlignment="center"
 
-            android:textStyle="bold" />
-    </LinearLayout>
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#c2c2bd"
+                />
+
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_weight="1"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="#ed8828"
+                android:text="Xem thêm"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+
+                android:textStyle="bold" />
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="15sp"
@@ -308,45 +344,56 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="70sp"
+            android:layout_height="90sp"
             android:background="#fafaf8"
+            android:textColor="#100f0f"
+            android:maxLength="300"
+            android:text="Nhà Hàng VietFeeder tự hào giới thiệu phong vị Ẩm thực Việt Nam phong phú, với nhiều món ăn mang hơi thở và hương vị riêng biêt từ quê hương mình. Hương vị đặc trưng ấy được kiến tạo từ bàn tay của những người đầu bếp tài hoa và đầy kinh nghiệm mà chúng tôi may mắn được cùng hợp tác, hứa hẹn sẽ khiến mỗi thực khách đến nhà hàng đều ra về với sự hài lòng trọn vẹn.... "
             />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <Button
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#ed8828"
-            android:text="Đặt hàng"
-            android:textAlignment="center"
-
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="#c2c2bd"
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="#d9d9d6"
             />
 
-        <Button
-            android:id="@+id/btn8"
-            android:layout_weight="1"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:background="#ed8828"
-            android:text="Xem thêm"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            android:textStyle="bold" />
-    </LinearLayout>
+
+            <Button
+                android:id="@+id/btndathang4"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ed8828"
+                android:text="Đặt hàng"
+                android:textAlignment="center"
+
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#c2c2bd"
+                />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_weight="1"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="#ed8828"
+                android:text="Xem thêm"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+
+                android:textStyle="bold" />
+        </LinearLayout>
 
 
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dev.the_food_house.ReadmoreActivity"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/img"
+        android:scaleType="fitXY"
+
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:id="@+id/txtrm"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            />
+
+    </ScrollView>
+
+
+</LinearLayout>

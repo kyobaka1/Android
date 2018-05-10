@@ -37,7 +37,7 @@ public class Bao_BinhLuan_Adapter extends BaseAdapter {
     private Button modify;
     private user loginUser = new user(true);
     private ArrayList<Bao_BinhLuan> binhLuanList;
-    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();;
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
     public Bao_BinhLuan_Adapter(Context context, int layout, ArrayList<Bao_BinhLuan> BinhLuanList) {
         this.context = context;
         this.layout = layout;

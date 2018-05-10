@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5b89"
+    android:background="@color/colormenu"
     android:id="@+id/actionbar_tab"
     android:orientation="vertical">
 
@@ -10,30 +10,292 @@
         android:id="@+id/stub_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:inflatedId="@+id/showlayout"
         android:layout="@layout/my_listview"/>
-
     <ViewStub
         android:id="@+id/stub_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:inflatedId="@+id/showlayout"
         android:layout="@layout/my_gridview"/>
-    <Button
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_gravity="bottom|center"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         android:background="@color/colorAccent"
-        android:text="Xem Dỏ Hàng"
-        android:id="@+id/btnxemdo"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        />
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Xem Giỏ Hàng"
+            android:id="@+id/btnxemdo"
+            android:textSize="17dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="#00000000"
+            android:text="50.000 đ "
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:id="@+id/total"
+            />
+
+        <FrameLayout
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/equa"
+            android:id="@+id/border"
+            >
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:id="@+id/number"
+                />
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#937A7A7A"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:background="#fff"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+
+                >
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:gravity="center|left"
+                    android:text="   Chọn size"
+                    android:textColor="@color/colorpink"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/close"
+                    android:layout_gravity="center|right"
+                    android:id="@+id/close"
+                    />
+            </FrameLayout>
+
+
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="2dp"
+                android:background="#7BFF4081"
+                android:layout_gravity="center"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="left"
+                    android:gravity="center|top"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/drinkni"
+                        android:layout_marginTop="50dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:text="Size nhỏ"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:text="45.000đ"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center|top"
+                        >
+
+                        <Button
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/minus"
+                            android:layout_margin="2dp"
+
+                            />
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:text="2"
+                            android:gravity="center"
+                            android:textColor="@color/colorpink"
+                            android:textStyle="bold"
+                            android:layout_margin="2dp"
+                            />
+
+                        <Button
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/plus"
+                            android:layout_margin="2dp"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="right"
+                    android:gravity="center|top"
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/drinkpl"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:gravity="center"
+                        android:text="Size Lớn"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:gravity="center"
+                        android:text="45.000đ"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|top
+"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/minus"
+
+                            />
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/colorpink"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/plus"
+
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="2dp"
+                    android:background="#7BFF4081"
+                    android:layout_marginTop="152dp"
+                    android:layout_gravity="center|top"
+                    />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/borderbutton"
+                    android:layout_marginTop="165dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:text=" Đồng ý "
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorpink"
+                    />
+
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
 
 
 </FrameLayout>

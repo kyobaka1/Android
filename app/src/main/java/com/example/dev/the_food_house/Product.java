@@ -5,21 +5,22 @@ package com.example.dev.the_food_house;
  */
 
 public class Product {
-    private int imageId;
+    private String imageId;
     private String title;
     private String description;
     private int price;
-    private int number=0;
+    private int number;
 
 
-    public Product(int imageId, String title, String description, int price) {
+    public Product(String imageId, String title, String description, int price,int number) {
         this.imageId = imageId;
         this.title = title;
         this.description = description;
         this.price=price;
+        this.number=number;
     }
 
-    public int getImageId() {
+    public String getImageId() {
         return imageId;
     }
 
@@ -27,7 +28,7 @@ public class Product {
         return number;
     }
 
-    public void setImageId(int imageId) {
+    public void setImageId(String imageId) {
         this.imageId = imageId;
     }
 

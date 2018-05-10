@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/holo_green_dark">
 
     <com.google.android.gms.maps.MapView
@@ -9,122 +10,183 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <Button
-        android:id="@+id/btnloca"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="right|bottom"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/local" />
-
-
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_gravity="top|center"
-        android:layout_marginTop="50dp"
-        android:background="#ffffff"
-        android:gravity="center|left"
-        android:textStyle="bold">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fl"
+        >
 
         <Button
-            android:layout_width="20dp"
-            android:layout_height="22dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/icon_mot"
-
+            android:id="@+id/btnloca"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="180dp"
+            android:background="@drawable/pickmarket"
+            android:layout_marginRight="5dp"
             />
 
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="30dp"
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
             android:gravity="center|left"
-            android:text="  A75,Lê Văn Việt,Hiệp Phú..."
-            android:textColor="#000000"
-            android:textSize="11dp" />
-    </LinearLayout>
+            android:layout_marginRight="10dp"
+            android:textStyle="bold">
 
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_gravity="top|center"
-        android:layout_marginTop="82dp"
-        android:background="#ffffff"
-        android:gravity="center|left"
-        android:textColor="#ffffff"
-        android:textSize="14dp">
+            <Button
+                android:layout_width="31dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/marketf"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="30dp"
+                android:gravity="center|left"
+                android:hint="Loading..."
+                android:textColorHint="#000"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:maxLength="30"
+                android:id="@+id/edlocation"
+                android:layout_marginLeft="5dp"
+                android:background="#fff"
+
+
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:gravity="center|left"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            >
+
+            <Button
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/timepink"
+                android:gravity="center|left"
+                android:id="@+id/btnpicktime"
+                />
+
+            <TextView
+                android:id="@+id/txttime"
+                android:layout_width="220dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:maxLength="30"
+                android:text="Giao Ngay t!"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+
+
+
+
+        </LinearLayout>
+
+
+
 
         <Button
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/icon_hai"
-
-            />
-
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="30dp"
-            android:gravity="center|left"
-            android:text="  Bạn có mã khuyến mãi không ?"
-            android:textColor="#000000"
+            android:id="@+id/btnChonMon"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorAccent"
+            android:text="Chọn Món"
+            android:textColor="#ffffff"
             android:textSize="11dp"
-
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_gravity="top|center"
-        android:layout_marginTop="114dp"
-        android:background="#ffffff"
-        android:gravity="center|left"
-        android:textColor="#ffffff"
-        android:textStyle="bold">
-
-        <Button
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/icon_ba"
+            android:textStyle="bold"
 
             />
 
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="30dp"
-            android:gravity="center|left"
-            android:text="  Giao Ngay !"
-            android:textColor="#000000"
-            android:textSize="11dp"
 
-            />
-    </LinearLayout>
-    <!--<TextView-->
-    <!--android:layout_width="250dp"-->
-    <!--android:layout_height="30dp"-->
-    <!--android:background="@color/common_action_bar_splitter"-->
-    <!--android:text="Bạn có mã khuyến mãi không ?"-->
-    <!--android:layout_gravity="top|center"-->
-    <!--android:layout_marginTop="81dp"-->
-    <!--android:textColor="#ffffff"-->
-    <!--android:gravity="center|left"-->
-    <!--android:textSize="14dp"-->
-    <!--/>-->
-    <Button
-        android:id="@+id/btnChonMon"
-        android:layout_width="200dp"
-        android:layout_height="25dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="50dp"
-        android:background="@color/colorAccent"
-        android:text="Chọn Món"
-        android:textColor="#ffffff"
-        android:textSize="11dp"
-        android:textStyle="bold"
+    </FrameLayout>
 
-        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:visibility="gone"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_gravity="center|bottom"
+            android:fillViewport="true"
+            >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:gravity="center"
+
+                >
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="250dp"
+                    android:layout_height="350dp"
+                    android:calendarViewShown="true"
+                    android:spinnersShown="false"
+                    android:background="#fff"
+                    />
+
+                <TimePicker
+                    android:id="@+id/time_picker"
+                    android:layout_width="250dp"
+                    android:layout_height="350dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#fff"
+                    />
+
+                <Button
+                    android:id="@+id/date_time_set"
+                    android:layout_width="250dp"
+                    android:text="Chọn Thời Gian"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorpink"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#fff"
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </FrameLayout>
+
+
+
 
 </FrameLayout>
+
+
+
+

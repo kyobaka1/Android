@@ -11,12 +11,19 @@ public class Store_Activity {
     private Double Longitude;
     private int Phone;
     private Double distance;
-    public Store_Activity(String Name, String Address, Double Latitude, Double Longtitude, int Phone) {
+    private String image;
+    private String quan;
+
+
+
+    public Store_Activity(String Name, String Address, Double Latitude, Double Longtitude, int Phone,String image,String quan) {
         this.Name = Name;
         this.Address = Address;
         this.Latitude = Latitude;
         this.Longitude=Longtitude;
         this.Phone=Phone;
+        this.image=image;
+        this.quan=quan;
     }
     public Store_Activity()
     {
@@ -27,6 +34,17 @@ public class Store_Activity {
     {
         this.Name=Name;
     }
+
+    public void setimage(String image)
+    {
+        this.image=image;
+    }
+    public void setquan(String image)
+    {
+        this.quan=quan;
+    }
+
+
     public void setAddress(String Address)
     {
         this.Address=Address;
@@ -42,6 +60,14 @@ public class Store_Activity {
 
     public String getName() {
         return Name;
+    }
+
+    public String getimage() {
+        return image;
+    }
+
+    public String getquan() {
+        return quan;
     }
 
     public String getAddress() {

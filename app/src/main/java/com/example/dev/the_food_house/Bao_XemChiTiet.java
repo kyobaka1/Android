@@ -1,6 +1,6 @@
 package com.example.dev.the_food_house;
 
-import com.example.dev.the_food_house.model.user;
+    import com.example.dev.the_food_house.model.user;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.Notification;
@@ -145,25 +145,7 @@ public class Bao_XemChiTiet extends AppCompatActivity {
         setMauNen(background);
         setCoChu(size);
     }
-    public void createNotification(View view) {
-        // Prepare intent which is triggered if the
-        // notification is selected
-        Intent intent = new Intent(this, MainActivity.class);
-        PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, 0);
-        // Build notification
-        // Actions are just fake
-        Notification noti = new Notification.Builder(this)
-                .setContentTitle("New mail from " + "test@gmail.com")
-                .setContentText("Subject").setSmallIcon(R.drawable.loveicon)
-                .setContentIntent(pIntent)
-                .addAction(R.drawable.loveicon, "Call", pIntent)
-                .addAction(R.drawable.loveicon, "More", pIntent)
-                .addAction(R.drawable.loveicon, "And more", pIntent).build();
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        // hide the notification after its selected
-        noti.flags |= Notification.FLAG_AUTO_CANCEL;
-        notificationManager.notify(0, noti);
-    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.dnv_bao_actionbar, menu);
@@ -248,23 +230,23 @@ public class Bao_XemChiTiet extends AppCompatActivity {
     public void setCoChu(int item){
         switch (item){
             case 1: //Cỡ Lớn.
-                tv1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-                tv2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-                tv3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+                tv1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 21);
+                tv2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 21);
+                tv3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 21);
                 size = 1;
                 writeToFile("Font:"+font+"-Background:"+background+"-Size:"+1,getBaseContext());
                 break;
             case 2: //Cỡ Lớn.
-                tv1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-                tv2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-                tv3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+                tv1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
+                tv2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
+                tv3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
                 size = 2;
                 writeToFile("Font:"+font+"-Background:"+background+"-Size:"+2,getBaseContext());
                 break;
             case 3: //Cỡ Lớn.
-                tv1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
-                tv2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
-                tv3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+                tv1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+                tv2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+                tv3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
                 size = 3;
                 writeToFile("Font:"+font+"-Background:"+background+"-Size:"+3,getBaseContext());
                 break;

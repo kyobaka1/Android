@@ -37,27 +37,35 @@ public class LoginActivity extends AppCompatActivity {
         actionBar.hide();
         //check login
         DBAdapter db = new DBAdapter(LoginActivity.this);
-        db.open();
-        final String sdt = db.getCurrentUser();
-        db.close();
+        try{
+            db.open();
+            final String sdt = db.getCurrentUser();
+            db.close();
+            DatabaseReference mostafa = session.child(sdt);
 
-        DatabaseReference mostafa = session.child(sdt);
-
-        mostafa.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String sdtcom = dataSnapshot.getValue(String.class);
-                if (sdtcom.equals("true")){
-                    Intent myIntent=new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(myIntent);
+            mostafa.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    String sdtcom = dataSnapshot.getValue(String.class);
+                    if (sdtcom.equals("true")){
+                        Intent myIntent=new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(myIntent);
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
+        }catch (Exception e){
+
+        }finally {
+
+        }
+
+
+
 
 
 

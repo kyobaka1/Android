@@ -210,6 +210,9 @@ public class XemDoHangActivity extends AppCompatActivity {
                 TextView tvprice=(TextView)findViewById(R.id.tvprice);
                 tvprice.setVisibility(View.GONE);
 
+//                Intent myIntent=new Intent(Bay, MainActivity.class);
+//                startActivity(myIntent);
+
             }
         });
 

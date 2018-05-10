@@ -109,6 +109,10 @@ public class Setting_Fragment extends AppCompatActivity {
                         startActivity(gioithieuIntent);
                         break;
                     case 6: // Đăng xuất
+                        user a = new user();
+                        a.Logout(Setting_Fragment.this);
+                        Intent sd = new Intent(Setting_Fragment.this, LoginActivity.class);
+                        startActivity(sd);
                         break;
                 }
             }

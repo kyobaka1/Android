@@ -14,10 +14,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-
-
-
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -32,8 +28,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_CONTAC" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -60,10 +55,6 @@
             android:name=".Setting_Fragment"
             android:label="                   Cài đặt"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Setting_Fragment_Quanlitaikhoan"
-            android:label="              Quản lí tài khoản"
-            android:parentActivityName=".Setting_Fragment" />
         <activity
             android:name=".Setting_Fragment_Thanhtoan"
             android:label="                 Thanh toán"
@@ -99,20 +90,14 @@
         <activity
             android:name=".Bao_XemChiTiet"
             android:label="" />
-        <activity android:name=".Setting_Setup_Database"></activity>
-
-
+        <activity android:name=".Setting_Setup_Database" />
         <activity android:name=".XemDoHangActivity" />
-        <activity android:name=".BillActivity"></activity>
-
-        <activity android:name=".HistoryActivity"></activity>
-        <activity android:name=".ReadmoreActivity"></activity>
-
-
-
-
-
-
+        <activity android:name=".BillActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".ReadmoreActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".payActivity" />
+        <activity android:name=".payviewActivity"></activity>
     </application>
 
 </manifest>

@@ -63,12 +63,17 @@ public class user {
         return true;
     }
 
-    public boolean Logout(){
+    public boolean Logout(Context a){
+
+        DBAdapter db = new DBAdapter(a);
+        db.open();
+        String sdt = db.getCurrentUser();
+        db.close();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference session = database.getReference("session");
         //delete session
-        session.child(phone).setValue("false");
+        session.child(sdt).setValue("false");
         //
         return true;
     }

@@ -26,6 +26,8 @@ public class Adapter extends FragmentStatePagerAdapter {
         mLocationFragment = new Location_Fragment();
         mCoupon_Fragment = new Coupon_Fragment();
         mBao_Fragment = new Bao_Fragment();
+
+        //tt
     }
 
     @Override

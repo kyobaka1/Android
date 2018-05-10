@@ -88,7 +88,9 @@ public class phoneSignActivity extends AppCompatActivity {
                             //kiem tra mat khau
                             user a = new user();
                             a = dataSnapshot.getValue(user.class);
-                            if(a.getPassword()!=_user.getPassword()){
+                            String pass = a.getPassword();
+                            String pass1 = _user.getPassword();
+                            if(!pass.equals(pass1)){
                                 Toast.makeText(phoneSignActivity.this,"Password sai",Toast.LENGTH_SHORT).show();
                             }else {
                                 //mat khau dung
@@ -100,6 +102,9 @@ public class phoneSignActivity extends AppCompatActivity {
 //                                Cursor c = db.getAllContacts();
 //                                String sdt = db.getCurrentUser();
                                 db.close();
+
+                                //luu phien nguoi dung vao db
+                                session.child(_user.getPhone()).setValue("true");
 
                                 Intent myIntent=new Intent(phoneSignActivity.this, MainActivity.class);
                                 startActivity(myIntent);

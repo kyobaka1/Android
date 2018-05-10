@@ -1,7 +1,11 @@
 package com.example.dev.the_food_house.model;
 
 
+import android.content.Context;
+import android.database.Cursor;
+
 import com.example.dev.the_food_house.Product;
+import com.example.dev.the_food_house.SignupActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +36,7 @@ public class user {
     private ArrayList<Product> listHis;
     private String password;
     private String password_cof;
-    private String message;
+
 
 
     public String getPassword() {
@@ -65,92 +69,16 @@ public class user {
         final DatabaseReference session = database.getReference("session");
         //delete session
         session.child(phone).setValue("false");
+
         return true;
     }
 
-    public String[] LoginWithPhone(final String phone, final String password){
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("user");
-        final DatabaseReference session = database.getReference("session");
-
-        final String message[] = {"",""};
-        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-//                String phone = dataSnapshot.getValue(String.class);
-                //do what you want with the email
-
-                if(!dataSnapshot.hasChild(phone)){
-
-                    message[0]="user khong ton tai";
-                    message[1]="false";
-                }else {
-                    //check pass
-                    String a = dataSnapshot.child(phone).child("password").getValue().toString();
-                    if (a.equals(password)){
-                        message[0]="dang nhap thanh cong";
-                        message[1]="true";
-                        //gan session
-                        session.child(phone).setValue("true");
-                        //luu gia tri
-                    }else {
-                        message[0]="sai mat khau";
-                        message[1]="false";
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-
-        return message;
+    public String LoginWithPhone(final String phone, final String password){
+      return "";
     }
 
     public String SignupWithPhone(Function<String,String> function){
-        user a = new user(false);
-        a = this;
-
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("user");
-        final DatabaseReference session = database.getReference("session");
-
-//        check phone is duplicate
-        final boolean status = true;
-
-        DatabaseReference mostafa = session.child(a.phone);
-
-        final user finalA = a;
-        mostafa.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-//                String phone = dataSnapshot.getValue(String.class);
-                //do what you want with the email
-
-                if(!dataSnapshot.hasChild(finalA.getPhone())){
-
-                    //----------gan thong tin dang kys cho sqlite----------------------
-
-                    myRef.child(finalA.phone).setValue(finalA);
-                    session.child(finalA.phone).setValue("true");
-                    finalA.message = "Dang ky thanh cong";
-
-                }else {
-                    finalA.message = "Dang ky that bai";
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-
-        return finalA.message;
+      return "";
     }
 
     public user(boolean flag) {
@@ -184,7 +112,7 @@ public class user {
         return phone;
     }
 
-    public boolean isLogin() {
+    public boolean isLogin(Context ct) {
         return isLogin;
     }
 

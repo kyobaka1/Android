@@ -19,13 +19,15 @@ public class DBAdapter {
     public static final String stSoTT = "id";//số thứ tự
     public static final String stTen = "name";//tên
     public static final String stEmail = "email";//địa chỉ email
+    public static final String stbg = "bg";//background
+    public static final String avatar = "av";//avatar
 
     private static final String stClass = "DBAdapter";
     private static final String stCSDL = "MyDB";
     private static final String stBang = "contacts";
     private static final int iPhienBan = 1;
 
-    private static final String DATABASE_CREATE = "create table contacts (id integer, "+ "name text not null, email text not null);";
+    private static final String DATABASE_CREATE = "create table contacts (id integer, "+ "name text not null, email text not null,bg text, av text);";
     private final Context context;
 
     private static DatabaseHelper DBHelper;
@@ -109,8 +111,36 @@ public class DBAdapter {
     public String getCurrentUser(){
         Cursor c = db.query(stBang, new String[] {stSoTT ,  stTen, stEmail }, null, null, null, null, null);
         c.moveToLast();
-        return c.getString(2);
+        return c.getString(2);//sdt
     }
+
+    public boolean setbgUser(String bg){
+        String sdtuser = getCurrentUser();
+        ContentValues args = new ContentValues();
+        args.put(stbg, bg);
+        return  db.update(stBang,args,stEmail + "LIKE"+sdtuser,null)>0;
+    }
+
+    public String getbguser(){
+        Cursor c = db.query(stBang,new String[] {stbg},null,null,null,null,null);
+        c.moveToFirst();
+        return c.getString(0);
+    }
+
+    public boolean setavUser(String bg){
+        String sdtuser = getCurrentUser();
+        ContentValues args = new ContentValues();
+        args.put(avatar, bg);
+        return  db.update(stBang,args,stEmail + "LIKE"+sdtuser,null)>0;
+    }
+
+    public String getavuser(){
+        Cursor c = db.query(stBang,new String[] {avatar},null,null,null,null,null);
+        c.moveToFirst();
+        return c.getString(0);
+    }
+
+
 
 
 

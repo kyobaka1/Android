@@ -53,12 +53,14 @@ public class GridViewAdapter extends ArrayAdapter<Product> {
         Button btminus=(Button)v.findViewById(R.id.minus);
 
         txtPrice.setText(""+product.getPrice()+"đ");
+
         byte[] decodedString = Base64.decode(product.getImageId(), Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
         Log.e("thanh","thanh :"+decodedString);
 
         img.setImageBitmap(decodedByte);
+
         txtTitle.setText(product.getTitle());
         txtDescription.setText("  "+product.getDescription());
         txtnumber.setText(""+product.getNumber());
@@ -73,11 +75,15 @@ public class GridViewAdapter extends ArrayAdapter<Product> {
                     product.setNumber(i);
                     txtnumber.setText(""+i);
                     Toast.makeText(getContext(),"minus"+i+"p:"+position, Toast.LENGTH_SHORT).show();
+
                     Oder_Food_Activity of=new Oder_Food_Activity();
+
                     of.number= of.number-1;
                     of.total=of.total-product.getPrice();
+
                     of.tvtotal.setText(""+of.total +" đ");
                     of.tvnumber.setText(""+of.number);
+
                     of.fl.setVisibility(View.VISIBLE);
                     of.tvtotal.setVisibility(View.VISIBLE);
                     of.FirebaseNumber(position,i);

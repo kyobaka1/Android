@@ -2,16 +2,27 @@
 package com.example.dev.the_food_house;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -31,6 +42,10 @@ public class Home_Fragment extends Fragment {
     Button  btndt7;
     Button  btndt8;
     Button  btndt9;
+    TextView tv;
+    TextView tv1;
+    TextView tv2;
+    TextView tv3;
     ImageView im;
 
     @Nullable
@@ -134,7 +149,6 @@ public class Home_Fragment extends Fragment {
                 it.putExtra("YourValueKey2",""+1);
                 startActivity(it);
 
-
             }
         });
 
@@ -171,7 +185,9 @@ public class Home_Fragment extends Fragment {
             public void onClick(View view) {
 
                 Intent it=new Intent(getActivity(),HistoryActivity.class);
+
                 it.putExtra("YourValueKey5",""+1);
+
                 startActivity(it);
 
 
@@ -232,6 +248,115 @@ public class Home_Fragment extends Fragment {
                 return false;
             }
         });
+
+
+
+
+
+        DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
+        myFirebaseRef.child("home").addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("text1"))
+                {
+                    tv=(TextView)mRootView.findViewById(R.id.text);
+                    tv.setText(""+dataSnapshot.getValue().toString());
+                    Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+
+                }
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("text2"))
+                {
+                    TextView tv1=(TextView)mRootView.findViewById(R.id.text1);
+                    tv1.setText(""+dataSnapshot.getValue().toString());
+                    Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+                }
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("text3"))
+                {
+                    TextView tv1=(TextView)mRootView.findViewById(R.id.text2);
+                    tv1.setText(""+dataSnapshot.getValue().toString());
+                    Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+                }
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("text4"))
+                {
+                    TextView tv1=(TextView)mRootView.findViewById(R.id.text3);
+                    tv1.setText(""+dataSnapshot.getValue().toString());
+                    Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+
+                }
+
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("image1"))
+                {
+                     ImageView iv=(ImageView)mRootView.findViewById(R.id.picture_imagebutton);
+
+                     byte[] decodedString = Base64.decode(dataSnapshot.getValue().toString(), Base64.DEFAULT);
+                     Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                     iv.setImageBitmap(decodedByte);
+                     Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+
+                }
+
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("image2"))
+                {
+                    ImageView iv=(ImageView)mRootView.findViewById(R.id.picture_imagebutton1);
+
+                    byte[] decodedString = Base64.decode(dataSnapshot.getValue().toString(), Base64.DEFAULT);
+                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                    iv.setImageBitmap(decodedByte);
+                    Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+
+                }
+
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("image3"))
+                {
+                    ImageView iv=(ImageView)mRootView.findViewById(R.id.picture_imagebutton2);
+
+                    byte[] decodedString = Base64.decode(dataSnapshot.getValue().toString(), Base64.DEFAULT);
+                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                    iv.setImageBitmap(decodedByte);
+                    Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+
+                }
+                if(dataSnapshot.getKey().toString().equalsIgnoreCase("image4"))
+                {
+                    ImageView iv=(ImageView)mRootView.findViewById(R.id.picture_imagebutton3);
+
+                    byte[] decodedString = Base64.decode(dataSnapshot.getValue().toString(), Base64.DEFAULT);
+                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+                    iv.setImageBitmap(decodedByte);
+                    Log.e("thanh khong",""+dataSnapshot.getValue().toString());
+
+                }
+
+
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
 
 
 

@@ -16,77 +16,68 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btnFood_"
-        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="50dp"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:background="@android:color/transparent"
         android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnOder"
-        app:layout_constraintEnd_toStartOf="@+id/viewPager"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnFood"
         app:layout_constraintTop_toBottomOf="@+id/btnFood"
-        app:srcCompat="@drawable/btn_home_cart" />
+        app:srcCompat="@drawable/btn_home_restaurant" />
 
     <ImageButton
         android:id="@+id/btnFood"
-        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="50dp"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:background="@android:color/transparent"
         android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnFood_"
-        app:layout_constraintEnd_toStartOf="@+id/viewPager"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnHome"
         app:layout_constraintTop_toBottomOf="@+id/btnHome"
         app:srcCompat="@drawable/btn_home" />
 
     <ImageButton
         android:id="@+id/btnHome"
         android:layout_width="50dp"
-        android:layout_height="212dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/vietlogo"
+        android:layout_height="136dp"
+        android:background="@android:color/transparent"
         android:contentDescription="TODO"
         android:scaleType="fitCenter"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/btnFood"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageButton
         android:id="@+id/btnOder"
         android:layout_width="50dp"
-        android:layout_height="0dp"
+        android:layout_height="52dp"
         android:background="@android:color/transparent"
         android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnLocation"
-        app:layout_constraintEnd_toStartOf="@+id/viewPager"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnFood_"
         app:layout_constraintTop_toBottomOf="@+id/btnFood_"
-        app:srcCompat="@drawable/btn_home_restaurant" />
+        app:srcCompat="@drawable/btn_home_cart" />
 
     <ImageButton
         android:id="@+id/btnLocation"
         android:layout_width="50dp"
-        android:layout_height="0dp"
+        android:layout_height="51dp"
         android:background="@android:color/transparent"
         android:contentDescription="TODO"
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btnMusic"
-        app:layout_constraintEnd_toStartOf="@+id/viewPager"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnOder"
         app:layout_constraintTop_toBottomOf="@+id/btnOder"
         app:srcCompat="@drawable/btn_home_location" />
 
@@ -98,7 +89,6 @@
         android:paddingHorizontal="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/btn_home_setting" />
 
@@ -112,16 +102,13 @@
     <ImageButton
         android:id="@+id/btnMusic"
         android:layout_width="50dp"
-        android:layout_height="0dp"
+        android:layout_height="50dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/btn_setting"
-        app:layout_constraintEnd_toStartOf="@+id/viewPager"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnLocation"
         app:layout_constraintTop_toBottomOf="@+id/btnLocation"
-        app:srcCompat="@drawable/chonbaoicon" />
-
+        app:srcCompat="@drawable/btn_home_music" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,7 +1,9 @@
 package com.example.dev.the_food_house.model;
+import android.widget.Toast;
 
-
+import com.example.dev.the_food_house.MainActivity;
 import com.example.dev.the_food_house.Product;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -11,13 +13,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 /**
  * Created by dev on 4/11/2018.
  */
-
-
 
 public class user {
     private String userName;
@@ -33,6 +32,9 @@ public class user {
     private String password;
     private String password_cof;
     private String message;
+
+
+
 
 
     public String getPassword() {
@@ -51,11 +53,9 @@ public class user {
         this.password_cof = password_cof;
     }
 
+
     public boolean CheckLogin(){
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference session = database.getReference("session");
-        //delete session
-        session.child(phone);
+
         return true;
     }
 
@@ -92,7 +92,6 @@ public class user {
                         message[1]="true";
                         //gan session
                         session.child(phone).setValue("true");
-                        //luu gia tri
                     }else {
                         message[0]="sai mat khau";
                         message[1]="false";
@@ -110,7 +109,8 @@ public class user {
         return message;
     }
 
-    public String SignupWithPhone(Function<String,String> function){
+
+    public String SignupWithPhone(){
         user a = new user(false);
         a = this;
 
@@ -131,13 +131,9 @@ public class user {
                 //do what you want with the email
 
                 if(!dataSnapshot.hasChild(finalA.getPhone())){
-
-                    //----------gan thong tin dang kys cho sqlite----------------------
-
                     myRef.child(finalA.phone).setValue(finalA);
                     session.child(finalA.phone).setValue("true");
                     finalA.message = "Dang ky thanh cong";
-
                 }else {
                     finalA.message = "Dang ky that bai";
                 }
@@ -166,10 +162,8 @@ public class user {
         }
     }
 
-    public user(){}
-
     public String getUserName() {
-        return "levanchon1";
+        return userName;
     }
 
     public String getID() {

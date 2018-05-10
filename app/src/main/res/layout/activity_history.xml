@@ -7,31 +7,19 @@
     tools:context="com.example.dev.the_food_house.HistoryActivity"
     android:orientation="vertical"
     >
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/profile"
-        android:scaleType="fitXY"
-
-        />
-
-    <ScrollView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        android:fillViewport="true"
+        android:id="@+id/mylistview"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:divider="@color/colormenu"
+        android:dividerHeight="20px"
+        android:paddingBottom="50dp"
+        android:paddingTop="30dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"
         >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="700dp"
-            android:id="@+id/his"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            />
-
-
-    </ScrollView>
-
+    </ListView>
 
 </LinearLayout>

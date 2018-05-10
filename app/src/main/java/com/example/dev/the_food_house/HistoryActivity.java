@@ -6,12 +6,20 @@ import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.ByteArrayOutputStream;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -19,32 +27,68 @@ import java.io.ByteArrayOutputStream;
  */
 
 public class HistoryActivity extends AppCompatActivity {
-    String name5;
-    String x = "1";
 
+    private List<Product> productList;
+    private ListViewAdapter listViewAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        Intent intent = getIntent();
-        Bitmap bmp =  BitmapFactory.decodeResource(getResources(),R.drawable.avartar);//your image
+        ListView listView = (ListView) findViewById(R.id.mylistview);
 
-        ByteArrayOutputStream bYtE = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.PNG, 100, bYtE);
-        bmp.recycle();
-        byte[] byteArray = bYtE.toByteArray();
-        String encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
+        productList = new ArrayList<>();
 
-        name5 = intent.getStringExtra("YourValueKey5");
+        listViewAdapter = new ListViewAdapter(this, R.layout.list_item, productList);
 
-        if (x.equalsIgnoreCase(name5)) {
+        listView.setAdapter(listViewAdapter);
 
-            TextView tv = (TextView) findViewById(R.id.his);
-            tv.setText("History");
-            ImageView iv=(ImageView)findViewById(R.id.profile);
-            iv.setImageResource(R.drawable.avartar);
+        productList.clear();
 
-        }
+        DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
+
+        myFirebaseRef.child("history").child("thanh").addChildEventListener(new
+          ChildEventListener() {
+                                                                       @Override
+                                                                       public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+                                                                           if(dataSnapshot.child("number").getValue().toString().equalsIgnoreCase("0"))
+                                                                           {
+
+                                                                           }
+                                                                           else
+                                                                           {
+                                                                               productList.add(new Product(dataSnapshot.child("image").getValue().toString(), dataSnapshot.child("name").getValue().toString(),dataSnapshot.child("des").getValue().toString(),Integer.parseInt(dataSnapshot.child("price").getValue().toString()),Integer.parseInt(dataSnapshot.child("number").getValue().toString())));
+                                                                               listViewAdapter.notifyDataSetChanged();
+
+                                                                               //Log.e("log",""+dataSnapshot);
+
+                                                                           }
+                                                                           Log.e("firebase",""+productList.size() );
+                                                                       }
+
+                                                                       @Override
+                                                                       public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                                                                       }
+
+                                                                       @Override
+                                                                       public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                                                                       }
+
+                                                                       @Override
+                                                                       public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                                                                       }
+
+                                                                       @Override
+                                                                       public void onCancelled(DatabaseError databaseError) {
+
+                                                                       }
+                                                                   });
+
+
+
     }
 }

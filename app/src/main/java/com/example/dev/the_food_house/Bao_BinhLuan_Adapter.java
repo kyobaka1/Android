@@ -65,7 +65,7 @@ public class Bao_BinhLuan_Adapter extends BaseAdapter {
         private ImageButton modify;
     }
     @Override
-    public View getView(final int i, View view, ViewGroup viewGroup) {
+    public View getView(int i, View view, ViewGroup viewGroup) {
         final ViewHolder holder;
         if( view == null){
             LayoutInflater inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -84,7 +84,7 @@ public class Bao_BinhLuan_Adapter extends BaseAdapter {
         else{
             holder = (ViewHolder) view.getTag();
         }
-        Bao_BinhLuan binhLuan = binhLuanList.get(i);
+        final Bao_BinhLuan binhLuan = binhLuanList.get(i);
         holder.username.setText(binhLuan.getTenUser());
         holder.binhluan.setText(binhLuan.getBinhLuan());
         Picasso.get().load(binhLuan.getAvarta()).into(holder.avarta);
@@ -99,8 +99,8 @@ public class Bao_BinhLuan_Adapter extends BaseAdapter {
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(loginUser.getUserName().equals(binhLuanList.get(i).getTenUser())) {
-                    mDatabase.child("BinhLuan").child("" + binhLuanList.get(i).getKey()).removeValue();
+                if(loginUser.getUserName().equals(binhLuan.getTenUser())) {
+                    mDatabase.child("BinhLuan").child("" + binhLuan.getKey()).removeValue();
                 }
             }
         });
@@ -113,16 +113,15 @@ public class Bao_BinhLuan_Adapter extends BaseAdapter {
                 window.setAttributes(wlp);
                 suaBLDialog.setTitle("Sửa bình luận");
                 suaBLDialog.show();
-                suaBL.setText(binhLuanList.get(i).getBinhLuan());
-                modify.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String BL = suaBL.getText().toString();
-                        mDatabase.child("BinhLuan").child(""+binhLuanList.get(i).getKey()).child("binhLuan").setValue(BL);
-                        Toast.makeText(context,"OK Edit BL", Toast.LENGTH_SHORT).show();
-                        suaBLDialog.cancel();
-                    }
-                });
+                suaBL.setText(binhLuan.getBinhLuan());
+            }
+        });
+        modify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String BL = suaBL.getText().toString();
+                mDatabase.child("BinhLuan").child(""+binhLuan.getKey()).child("binhLuan").setValue(BL);
+                suaBLDialog.cancel();
             }
         });
         return view;

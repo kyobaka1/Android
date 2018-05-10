@@ -53,6 +53,7 @@ import java.util.Map;
 
 
 public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.TabListener{
+
     private ViewStub stubGrid;
     private ViewStub stubList;
     private ListView listView;
@@ -107,7 +108,7 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
         ab.addTab(ab.newTab().setText("Bánh").setTabListener(this));
 
         ///add fire base
-       /* Bitmap bmp =  BitmapFactory.decodeResource(getResources(),R.drawable.drinknam);//your image
+       /* Bitmap bmp =  BitmapFactory.decodeResource(getResources(),R.drawable.monan);//your image
         ByteArrayOutputStream bYtE = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.PNG, 100, bYtE);
         bmp.recycle();
@@ -117,7 +118,8 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
 
         DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
 
-        //myFirebaseRef.child("drink").child("drink5").child("image").setValue(""+encodedImage);
+       // myFirebaseRef.child("home").child("image3").setValue(""+encodedImage);
+
 
         /*for(int i=1;i<=5;i++)
         {
@@ -129,11 +131,9 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
 
         // for(int i=0;i)
 
-       /* byte[] decodedString = Base64.decode(encodedImage, Base64.DEFAULT);
+        /*byte[] decodedString = Base64.decode(encodedImage, Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-        */
-
-        /*ImageView iv=(ImageView)findViewById(R.id.test);
+        ImageView iv=(ImageView)findViewById(R.id.test);
         iv.setImageBitmap(decodedByte);*/
 
 
@@ -158,6 +158,7 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
             case 0: {
 
                 namefirebase="food";
+
                 setContentView(R.layout.actionbar_tab_1);
 
                 stubList = (ViewStub) findViewById(R.id.stub_list);
@@ -179,9 +180,7 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
                 //get list of product
                 //getProductList();
 
-
                 productList.clear();
-
 
                 DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
 
@@ -247,18 +246,19 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
                 });
 
                 tvtotal=(TextView)findViewById(R.id.total);
+
                 tvnumber=(TextView)findViewById(R.id.number);
                 fl=(FrameLayout)findViewById(R.id.border);
 
                 if(number==0)
                 {
+
                     fl.setVisibility(View.GONE);
                     tvtotal.setVisibility(View.GONE);
 
                 }
 
                 tvtotal.setText(""+total+" đ");
-
                 tvnumber.setText(""+number);
 
 
@@ -268,6 +268,7 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
                     public void onClick(View view) {
 
                         Toast.makeText(getApplicationContext(),"cham !",Toast.LENGTH_SHORT).show();
+
                         Intent intent=new Intent(getApplicationContext(),XemDoHangActivity.class);
                         startActivity(intent);
 
@@ -275,11 +276,9 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
                     }
                 });
 
-
-
-
                 Toast.makeText(getApplicationContext(),"",Toast.LENGTH_SHORT).show();
                 switchView();
+
                 break;
             }
             case 1: {
@@ -335,15 +334,11 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
                     public void onChildMoved(DataSnapshot dataSnapshot, String s) {
 
                     }
-
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
 
                     }
-
-
                 });
-
 
                 //Get current view mode in share reference
                 SharedPreferences sharedPreferences = getSharedPreferences("ViewMode", MODE_PRIVATE);
@@ -430,11 +425,6 @@ public class Oder_Food_Activity extends AppCompatActivity implements ActionBar.T
                         listViewAdapter.notifyDataSetChanged();
                         gridViewAdapter.notifyDataSetChanged();
 
-                        //Log.e("firebase",""+ dataSnapshot.child("food1").getValue().toString());
-                   /* byte[] decodedString = Base64.decode(dataSnapshot.child("image").getValue().toString(), Base64.DEFAULT);
-                    Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                    ImageView iv=(ImageView)findViewById(R.id.test);
-                    iv.setImageBitmap(decodedByte);*/
 
                         Log.e("firebase",""+productList.size() );
 

@@ -69,7 +69,7 @@ public class user {
         final DatabaseReference session = database.getReference("session");
         //delete session
         session.child(phone).setValue("false");
-
+        //
         return true;
     }
 

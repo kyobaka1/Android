@@ -1315,13 +1315,15 @@ public class Location_Fragment extends Fragment implements LocationListener {
 
                     myFirebaseRef.child("tracking").child(phone).child("Latitude").setValue("" + Latitude);
                     myFirebaseRef.child("tracking").child(phone).child("Longitude").setValue("" + Longitude);
+                    myFirebaseRef.child("tracking").addChildEventListener(new ChildEventListener()
 
-                    myFirebaseRef.child("tracking").addChildEventListener(new ChildEventListener() {
+                    {
                         @Override
                         public void onChildAdded(final DataSnapshot dataSnapshot, String s) {
 
 
                             recoder = "no";
+
                             getContacts(dataSnapshot.getKey().toString());
 
                             if (recoder.equalsIgnoreCase("yes")) {
@@ -1332,12 +1334,9 @@ public class Location_Fragment extends Fragment implements LocationListener {
 
                                 Bitmap bMap = BitmapFactory.decodeResource(getResources(), R.drawable.friend);
                                 Bitmap bMapScaled = Bitmap.createScaledBitmap(bMap, 100, 100, true);
-
-
 //icon
                                 googleMap.addMarker(new MarkerOptions().position(sydney).icon(BitmapDescriptorFactory.fromBitmap(bMapScaled)).title(namephone).snippet(numberphone).visible(true)).showInfoWindow();
                                 Log.e("namephone", "" + namephone);
-
                                 //googleMap.add
                                 // For zooming automatically to the location of the marker
 

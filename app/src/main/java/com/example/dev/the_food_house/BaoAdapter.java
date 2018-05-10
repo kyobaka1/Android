@@ -88,6 +88,7 @@ public class BaoAdapter extends BaseAdapter {
         holder.share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(context,i+" Duoc nhan",Toast.LENGTH_SHORT).show();
                 BaoList.get(i).setSoshare( BaoList.get(i).getSoshare()+1);
                 mDatabase.child("Bao").child(String.valueOf(i)).child("soshare").setValue(BaoList.get(i).getSoshare());
             }

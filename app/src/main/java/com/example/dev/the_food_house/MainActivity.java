@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public static final int REQUEST_READ_CONTACTS = 79;
 
+
     Activity activity = MainActivity.this;
     String wantPermission = "android.permission.READ_PHONE_STATE";
     private static final int PERMISSION_REQUEST_CODE = 1;
@@ -120,8 +121,7 @@ public class MainActivity extends AppCompatActivity {
         btnOder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent settingIntent = new Intent(MainActivity.this, HocNauAnActivity.class);
-                startActivity(settingIntent);
+                mViewPage.setCurrentItem(2);
             }
         });
         btnLocation.setOnClickListener(new View.OnClickListener() {

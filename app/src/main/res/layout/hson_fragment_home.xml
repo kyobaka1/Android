@@ -150,15 +150,6 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="90sp"
-            android:background="#fafaf8"
-            android:textColor="#100f0f"
-            android:text="Những ngay cuối tháng 3 'rực rỡ' khiến bạn 'tuột mood' vì quá nóng và chán ăn ? Hãy cùng tham gia 'Chién dịch chống nóng và thưởng thức món ăn ngon' tại chuỗi nhà hàng VietFeeder ....."
-            android:maxLength="300"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
             android:layout_height="10sp"
             android:background="#d9d9d6"
             />
@@ -206,6 +197,15 @@
             android:background="#d9d9d6"
             />
 
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="90sp"
+            android:background="#fafaf8"
+            android:maxLength="300"
+            android:text="Những ngay cuối tháng 3 'rực rỡ' khiến bạn 'tuột mood' vì quá nóng và chán ăn ? Hãy cùng tham gia 'Chién dịch chống nóng và thưởng thức món ăn ngon' tại chuỗi nhà hàng VietFeeder ....."
+            android:textColor="#100f0f" />
+
         <ImageView
             android:id="@+id/picture_imagebutton1"
             android:layout_width="wrap_content"
@@ -220,6 +220,8 @@
             android:background="#fafaf8"
             android:maxLength="300"
             android:text="Nằm giữa đô thị hiện đại, VietFeeder lại mang đến cảm giác thân thuộc, dân dã cho thực khách ngay khi đặt chân vào cửa. Quán phục vụ các món ăn dân dã, đặc sản Nam Bộ,Bắc Bộ và Trung Bộ."
+            android:id="@+id/text1"
+
             />
 
         <TextView
@@ -284,6 +286,8 @@
             android:textColor="#100f0f"
             android:maxLength="300"
             android:text="Trong 4 ngày 24-25/4; 30/4 và ngày đầu tiên của năm mới 2018, nhà hàng mang đến 2 thực đơn đặc biệt với mức giá chung 1 triệu đồng/set ăn người lớn (chưa bao gồm VAT)...."
+            android:id="@+id/text2"
+
             />
 
         <TextView
@@ -349,6 +353,8 @@
             android:textColor="#100f0f"
             android:maxLength="300"
             android:text="Nhà Hàng VietFeeder tự hào giới thiệu phong vị Ẩm thực Việt Nam phong phú, với nhiều món ăn mang hơi thở và hương vị riêng biêt từ quê hương mình. Hương vị đặc trưng ấy được kiến tạo từ bàn tay của những người đầu bếp tài hoa và đầy kinh nghiệm mà chúng tôi may mắn được cùng hợp tác, hứa hẹn sẽ khiến mỗi thực khách đến nhà hàng đều ra về với sự hài lòng trọn vẹn.... "
+            android:id="@+id/text3"
+
             />
 
         <TextView

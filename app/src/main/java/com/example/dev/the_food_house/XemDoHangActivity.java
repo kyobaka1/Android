@@ -1,6 +1,7 @@
 package com.example.dev.the_food_house;
 
 import android.content.Intent;
+import android.content.Loader;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,11 +42,10 @@ public class XemDoHangActivity extends AppCompatActivity {
 
         listView.setAdapter(listViewAdapter);
 
-
         productList.clear();
 
-
         DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
+        myFirebaseRef.child("history").child("thanh").removeValue();
 
         myFirebaseRef.child("drink").addChildEventListener(new
           ChildEventListener() {
@@ -60,6 +61,15 @@ public class XemDoHangActivity extends AppCompatActivity {
                                                                            {
                                                                                productList.add(new Product(dataSnapshot.child("image").getValue().toString(), dataSnapshot.child("name").getValue().toString(),dataSnapshot.child("des").getValue().toString(),Integer.parseInt(dataSnapshot.child("price").getValue().toString()),Integer.parseInt(dataSnapshot.child("number").getValue().toString())));
                                                                                listViewAdapter.notifyDataSetChanged();
+
+                                                                               DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
+
+                                                                               myFirebaseRef.child("history").child("thanh").push().setValue(dataSnapshot.getValue());
+
+
+                                                                               //Log.e("log",""+dataSnapshot);
+
+
                                                                            }
                                                                            Log.e("firebase",""+productList.size() );
                                                                        }
@@ -87,7 +97,7 @@ public class XemDoHangActivity extends AppCompatActivity {
 
 
 
-                myFirebaseRef.child("food").addChildEventListener(new ChildEventListener() {
+        myFirebaseRef.child("food").addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
@@ -95,6 +105,10 @@ public class XemDoHangActivity extends AppCompatActivity {
                         } else {
                             productList.add(new Product(dataSnapshot.child("image").getValue().toString(), dataSnapshot.child("name").getValue().toString(), dataSnapshot.child("des").getValue().toString(), Integer.parseInt(dataSnapshot.child("price").getValue().toString()), Integer.parseInt(dataSnapshot.child("number").getValue().toString())));
                             listViewAdapter.notifyDataSetChanged();
+
+                            DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
+
+                            myFirebaseRef.child("history").child("thanh").push().setValue(dataSnapshot.getValue());
 
                         }
                         Log.e("firebase", "" + productList.size());
@@ -132,9 +146,10 @@ public class XemDoHangActivity extends AppCompatActivity {
                     @Override
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
-
                         DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
-                            myFirebaseRef.child("drink").child(dataSnapshot.getKey().toString()).child("number").setValue("0");
+
+                        //myFirebaseRef.
+                        myFirebaseRef.child("drink").child(dataSnapshot.getKey().toString()).child("number").setValue("0");
 
                     }
                     @Override
@@ -160,7 +175,9 @@ public class XemDoHangActivity extends AppCompatActivity {
 
 
                         DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
-                            myFirebaseRef.child("food").child(dataSnapshot.getKey().toString()).child("number").setValue("0");
+                        myFirebaseRef.child("food").child(dataSnapshot.getKey().toString()).child("number").setValue("0");
+
+
 
                     }
                     @Override

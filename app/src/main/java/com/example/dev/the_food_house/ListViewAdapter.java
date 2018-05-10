@@ -20,6 +20,7 @@ import java.util.List;
  */
 
 public class ListViewAdapter extends ArrayAdapter<Product> {
+
     public ListViewAdapter(Context context, int resource, List<Product> objects) {
         super(context, resource, objects);
     }
@@ -33,6 +34,7 @@ public class ListViewAdapter extends ArrayAdapter<Product> {
             v = inflater.inflate(R.layout.list_item, null);
         }
         Product product = getItem(position);
+
         ImageView img = (ImageView) v.findViewById(R.id.imageView);
         TextView txtTitle = (TextView) v.findViewById(R.id.txtTitle);
         TextView txtDescription = (TextView) v.findViewById(R.id.txtDescription);

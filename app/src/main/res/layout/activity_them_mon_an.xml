@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Them_mon_an">
+
+        <EditText
+            android:id="@+id/editTieude"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/backwithborder"
+            android:ems="10"
+            android:hint="Tên món ăn"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:textColor="#00FF00"/>
+
+    <EditText
+        android:id="@+id/editHD"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:layout_weight="9"
+        android:background="@drawable/backwithborder"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:hint="Hướng dẫn nấu ăn"
+        android:padding="20dp"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/buttonADD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm"
+        android:background="#ffffff"
+        android:textColor="#FF0000"/>
+</LinearLayout>

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1054850714575-cld2p4rhcf2teqio2be62d19io9c966p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dev.the_food_house",
+            "certificate_hash": "9f2ea8a7284b69f7cbe894f7d232b5c81f070bd9"
+          }
+        },
+        {
           "client_id": "1054850714575-bneo5tek7cj8kbfriir36egqocl7i1tm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

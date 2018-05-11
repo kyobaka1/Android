@@ -22,6 +22,7 @@ public class Setting_Setup_Database extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dnv_setting__setup__database);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        writeToFile("Font:1-Background:1-Size:1",this.getBaseContext());
     }
     public void initBao(){
         arBao = new ArrayList<>();

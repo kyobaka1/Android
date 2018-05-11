@@ -101,6 +101,7 @@
         <activity android:name=".HocNauAnActivity"></activity>
         <activity android:name=".YoutubeActivity"></activity>
         <activity android:name=".PlayVideoActivity"></activity>
+        <activity android:name=".Them_mon_an"></activity>
     </application>
 
 </manifest>

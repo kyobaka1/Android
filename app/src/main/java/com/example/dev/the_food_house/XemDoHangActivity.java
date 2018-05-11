@@ -47,6 +47,8 @@ public class XemDoHangActivity extends AppCompatActivity {
         DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference();
         myFirebaseRef.child("history").child("thanh").removeValue();
 
+
+
         myFirebaseRef.child("drink").addChildEventListener(new
           ChildEventListener() {
                                                                        @Override
@@ -204,14 +206,20 @@ public class XemDoHangActivity extends AppCompatActivity {
                 of.tvtotal.setVisibility(View.GONE);
                 of.tvnumber.setVisibility(View.GONE);
 
-                of.total=0;
-                of.number=0;
+
 
                 TextView tvprice=(TextView)findViewById(R.id.tvprice);
                 tvprice.setVisibility(View.GONE);
 
-//                Intent myIntent=new Intent(Bay, MainActivity.class);
-//                startActivity(myIntent);
+
+
+                Intent myIntent=new Intent(XemDoHangActivity.this, payActivity.class);
+
+                payActivity.tien=of.total;
+
+                startActivity(myIntent);
+                of.total=0;
+                of.number=0;
 
             }
         });

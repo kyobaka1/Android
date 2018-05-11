@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1054850714575",
+    "firebase_url": "https://thefoodhouse3.firebaseio.com",
+    "project_id": "thefoodhouse3",
+    "storage_bucket": "thefoodhouse3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054850714575:android:37148e89cb6d4ee9",
+        "android_client_info": {
+          "package_name": "com.example.dev.the_food_house"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054850714575-bneo5tek7cj8kbfriir36egqocl7i1tm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dev.the_food_house",
+            "certificate_hash": "9b8eb2319f470fbb1e87064c4c96d2b7df0aefa4"
+          }
+        },
+        {
+          "client_id": "1054850714575-voq6tn06gvt2g3361sbdnovj4slic0a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2WLlMmg2gAxpr2JU9rOQ4Es132BvTjRo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054850714575-voq6tn06gvt2g3361sbdnovj4slic0a8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

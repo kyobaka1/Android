@@ -98,6 +98,9 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".payActivity" />
         <activity android:name=".payviewActivity"></activity>
+        <activity android:name=".HocNauAnActivity"></activity>
+        <activity android:name=".YoutubeActivity"></activity>
+        <activity android:name=".PlayVideoActivity"></activity>
     </application>
 
 </manifest>

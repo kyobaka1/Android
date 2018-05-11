@@ -121,7 +121,8 @@ public class MainActivity extends AppCompatActivity {
         btnOder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mViewPage.setCurrentItem(2);
+                Intent settingIntent = new Intent(MainActivity.this, HocNauAnActivity.class);
+                startActivity(settingIntent);
             }
         });
         btnLocation.setOnClickListener(new View.OnClickListener() {
